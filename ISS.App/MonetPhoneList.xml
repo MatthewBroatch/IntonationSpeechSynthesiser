@@ -1,0 +1,3593 @@
+<Monet>
+	<MainCategoryList>
+		<Category name="phone" comment="This is the static phone category.  It cannot be changed or removed"/>
+		<Category name="asp"/>
+		<Category name="vocoid"/>
+		<Category name="contoid"/>
+		<Category name="stopped"/>
+		<Category name="silence"/>
+		<Category name="glide"/>
+		<Category name="fricative"/>
+		<Category name="nasal"/>
+		<Category name="affricate"/>
+		<Category name="checked"/>
+		<Category name="voiced"/>
+		<Category name="fortis"/>
+		<Category name="hlike"/>
+		<Category name="whistlehack" comment="Added so we can easily do the rewrite rule:  s* >> [f* | v* | th* | dh*]       transforms to:  s* >> qt* >> [f* | v* | th* | dh*]   Now works as:  s* >> whistlehack         transforms to:  s* >> qt* >> whistlehack"/>
+		<Category name="lhack"/>
+	</MainCategoryList>
+	<MainSymbolList>
+		<Symbol name="duration" min="0.0" max="500.0" defaultValue="100.0"/>
+		<Symbol name="transition" min="2.0" max="400.0" defaultValue="27.8"/>
+		<Symbol name="qssa" min="10.0" max="500.0" defaultValue="75.0"/>
+		<Symbol name="qssb" min="10.0" max="500.0" defaultValue="75.0"/>
+	</MainSymbolList>
+	<MainParameterList>
+		<Symbol name="microInt" min="-10.0" max="10.0" defaultValue="0.0"/>
+		<Symbol name="glotVol" min="0.0" max="60.0" defaultValue="60.0"/>
+		<Symbol name="aspVol" min="0.0" max="60.0" defaultValue="0.0"/>
+		<Symbol name="fricVol" min="0.0" max="10.0" defaultValue="0.0"/>
+		<Symbol name="fricPos" min="0.0" max="7.0" defaultValue="5.5"/>
+		<Symbol name="fricCF" min="100.0" max="20000.0" defaultValue="2500.0"/>
+		<Symbol name="fricBW" min="250.0" max="20000.0" defaultValue="500.0"/>
+		<Symbol name="r1" min="0.0" max="3.0" defaultValue="0.8"/>
+		<Symbol name="r2" min="0.0" max="3.0" defaultValue="1.5"/>
+		<Symbol name="r3" min="0.0" max="3.0" defaultValue="1.5"/>
+		<Symbol name="r4" min="0.0" max="3.0" defaultValue="1.5"/>
+		<Symbol name="r5" min="0.0" max="3.0" defaultValue="1.5"/>
+		<Symbol name="r6" min="0.0" max="3.0" defaultValue="1.5"/>
+		<Symbol name="r7" min="0.0" max="3.0" defaultValue="1.5"/>
+		<Symbol name="r8" min="0.0" max="3.0" defaultValue="1.5"/>
+		<Symbol name="velum" min="0.0" max="1.5" defaultValue="0.1"/>
+	</MainParameterList>
+	<MainPhoneList>
+		<Phone name="#" comment="This is an 'at rest' symbol that is used to start and terminate utterances without introducing ridiculous transitions etc!">
+			<Parameter name="microInt" value="0.0"/>
+			<Parameter name="glotVol" value="0.0"/>
+			<Parameter name="aspVol" value="0.0"/>
+			<Parameter name="fricVol" value="0.0"/>
+			<Parameter name="fricPos" value="5.5"/>
+			<Parameter name="fricCF" value="2500.0"/>
+			<Parameter name="fricBW" value="500.0"/>
+			<Parameter name="r1" value="0.8"/>
+			<Parameter name="r2" value="0.89"/>
+			<Parameter name="r3" value="0.99"/>
+			<Parameter name="r4" value="0.81"/>
+			<Parameter name="r5" value="0.76"/>
+			<Parameter name="r6" value="1.05"/>
+			<Parameter name="r7" value="1.23"/>
+			<Parameter name="r8" value="0.01"/>
+			<Parameter name="velum" value="0.1"/>
+			<Symbol name="duration" value="72.0"/>
+			<Symbol name="transition" value="20.0"/>
+			<Symbol name="qssa" value="26.0"/>
+			<Symbol name="qssb" value="26.0"/>
+			<Category name="silence"/>
+			<Category name="phone"/>
+		</Phone>
+
+		<Phone name="#'" comment="This is an 'at rest' symbol that is used to start and terminate utterances without introducing ridiculous transitions etc!">
+			<Parameter name="microInt" value="0.0"/>
+			<Parameter name="glotVol" value="0.0"/>
+			<Parameter name="aspVol" value="0.0"/>
+			<Parameter name="fricVol" value="0.0"/>
+			<Parameter name="fricPos" value="5.5"/>
+			<Parameter name="fricCF" value="2500.0"/>
+			<Parameter name="fricBW" value="500.0"/>
+			<Parameter name="r1" value="0.8"/>
+			<Parameter name="r2" value="0.89"/>
+			<Parameter name="r3" value="0.99"/>
+			<Parameter name="r4" value="0.81"/>
+			<Parameter name="r5" value="0.76"/>
+			<Parameter name="r6" value="1.05"/>
+			<Parameter name="r7" value="1.23"/>
+			<Parameter name="r8" value="0.01"/>
+			<Parameter name="velum" value="0.1"/>
+			<Symbol name="duration" value="72.0"/>
+			<Symbol name="transition" value="20.0"/>
+			<Symbol name="qssa" value="26.0"/>
+			<Symbol name="qssb" value="26.0"/>
+			<Category name="silence"/>
+			<Category name="phone"/>
+		</Phone>
+
+		<Phone name="^">
+			<Parameter name="microInt" value="0.0"/>
+			<Parameter name="glotVol" value="0.0"/>
+			<Parameter name="aspVol" value="0.0"/>
+			<Parameter name="fricVol" value="0.0"/>
+			<Parameter name="fricPos" value="5.5"/>
+			<Parameter name="fricCF" value="2500.0"/>
+			<Parameter name="fricBW" value="500.0"/>
+			<Parameter name="r1" value="0.8"/>
+			<Parameter name="r2" value="0.89"/>
+			<Parameter name="r3" value="0.99"/>
+			<Parameter name="r4" value="0.81"/>
+			<Parameter name="r5" value="0.76"/>
+			<Parameter name="r6" value="1.05"/>
+			<Parameter name="r7" value="1.23"/>
+			<Parameter name="r8" value="0.01"/>
+			<Parameter name="velum" value="0.1"/>
+			<Symbol name="duration" value="100.0"/>
+			<Symbol name="transition" value="40.0"/>
+			<Symbol name="qssa" value="30.0"/>
+			<Symbol name="qssb" value="30.0"/>
+			<Category name="silence"/>
+			<Category name="phone"/>
+		</Phone>
+
+		<Phone name="^'">
+			<Parameter name="microInt" value="0.0"/>
+			<Parameter name="glotVol" value="0.0"/>
+			<Parameter name="aspVol" value="0.0"/>
+			<Parameter name="fricVol" value="0.0"/>
+			<Parameter name="fricPos" value="5.5"/>
+			<Parameter name="fricCF" value="2500.0"/>
+			<Parameter name="fricBW" value="500.0"/>
+			<Parameter name="r1" value="0.8"/>
+			<Parameter name="r2" value="0.89"/>
+			<Parameter name="r3" value="0.99"/>
+			<Parameter name="r4" value="0.81"/>
+			<Parameter name="r5" value="0.76"/>
+			<Parameter name="r6" value="1.05"/>
+			<Parameter name="r7" value="1.23"/>
+			<Parameter name="r8" value="0.01"/>
+			<Parameter name="velum" value="0.1"/>
+			<Symbol name="duration" value="100.0"/>
+			<Symbol name="transition" value="40.0"/>
+			<Symbol name="qssa" value="30.0"/>
+			<Symbol name="qssb" value="30.0"/>
+			<Category name="silence"/>
+			<Category name="phone"/>
+		</Phone>
+
+		<Phone name="a">
+			<Parameter name="microInt" value="0.0"/>
+			<Parameter name="glotVol" value="60.0"/>
+			<Parameter name="aspVol" value="0.0"/>
+			<Parameter name="fricVol" value="0.0"/>
+			<Parameter name="fricPos" value="5.5"/>
+			<Parameter name="fricCF" value="2500.0"/>
+			<Parameter name="fricBW" value="500.0"/>
+			<Parameter name="r1" value="0.8"/>
+			<Parameter name="r2" value="0.65"/>
+			<Parameter name="r3" value="0.65"/>
+			<Parameter name="r4" value="0.65"/>
+			<Parameter name="r5" value="1.31"/>
+			<Parameter name="r6" value="1.23"/>
+			<Parameter name="r7" value="1.31"/>
+			<Parameter name="r8" value="1.67"/>
+			<Parameter name="velum" value="0.1"/>
+			<Symbol name="duration" value="77.0"/>
+			<Symbol name="transition" value="27.8"/>
+			<Symbol name="qssa" value="25.9"/>
+			<Symbol name="qssb" value="25.9"/>
+			<Category name="phone"/>
+			<Category name="vocoid"/>
+			<Category name="voiced"/>
+		</Phone>
+
+		<Phone name="a'">
+			<Parameter name="microInt" value="0.0"/>
+			<Parameter name="glotVol" value="60.0"/>
+			<Parameter name="aspVol" value="0.0"/>
+			<Parameter name="fricVol" value="0.0"/>
+			<Parameter name="fricPos" value="5.5"/>
+			<Parameter name="fricCF" value="2500.0"/>
+			<Parameter name="fricBW" value="500.0"/>
+			<Parameter name="r1" value="0.8"/>
+			<Parameter name="r2" value="0.65"/>
+			<Parameter name="r3" value="0.65"/>
+			<Parameter name="r4" value="0.65"/>
+			<Parameter name="r5" value="1.31"/>
+			<Parameter name="r6" value="1.23"/>
+			<Parameter name="r7" value="1.31"/>
+			<Parameter name="r8" value="1.67"/>
+			<Parameter name="velum" value="0.1"/>
+			<Symbol name="duration" value="132.4"/>
+			<Symbol name="transition" value="27.8"/>
+			<Symbol name="qssa" value="53.6"/>
+			<Symbol name="qssb" value="53.6"/>
+			<Category name="phone"/>
+			<Category name="vocoid"/>
+			<Category name="voiced"/>
+		</Phone>
+
+		<Phone name="aa">
+			<Parameter name="microInt" value="0.0"/>
+			<Parameter name="glotVol" value="60.0"/>
+			<Parameter name="aspVol" value="0.0"/>
+			<Parameter name="fricVol" value="0.0"/>
+			<Parameter name="fricPos" value="5.5"/>
+			<Parameter name="fricCF" value="2500.0"/>
+			<Parameter name="fricBW" value="500.0"/>
+			<Parameter name="r1" value="0.8"/>
+			<Parameter name="r2" value="0.65"/>
+			<Parameter name="r3" value="0.84"/>
+			<Parameter name="r4" value="1.15"/>
+			<Parameter name="r5" value="1.31"/>
+			<Parameter name="r6" value="1.59"/>
+			<Parameter name="r7" value="1.59"/>
+			<Parameter name="r8" value="2.61"/>
+			<Parameter name="velum" value="0.1"/>
+			<Symbol name="duration" value="84.0"/>
+			<Symbol name="transition" value="27.8"/>
+			<Symbol name="qssa" value="29.4"/>
+			<Symbol name="qssb" value="29.4"/>
+			<Category name="phone"/>
+			<Category name="vocoid"/>
+			<Category name="voiced"/>
+		</Phone>
+
+		<Phone name="aa'">
+			<Parameter name="microInt" value="0.0"/>
+			<Parameter name="glotVol" value="60.0"/>
+			<Parameter name="aspVol" value="0.0"/>
+			<Parameter name="fricVol" value="0.0"/>
+			<Parameter name="fricPos" value="5.5"/>
+			<Parameter name="fricCF" value="2500.0"/>
+			<Parameter name="fricBW" value="500.0"/>
+			<Parameter name="r1" value="0.8"/>
+			<Parameter name="r2" value="0.65"/>
+			<Parameter name="r3" value="0.84"/>
+			<Parameter name="r4" value="1.15"/>
+			<Parameter name="r5" value="1.31"/>
+			<Parameter name="r6" value="1.59"/>
+			<Parameter name="r7" value="1.59"/>
+			<Parameter name="r8" value="2.61"/>
+			<Parameter name="velum" value="0.1"/>
+			<Symbol name="duration" value="122.0"/>
+			<Symbol name="transition" value="27.8"/>
+			<Symbol name="qssa" value="48.4"/>
+			<Symbol name="qssb" value="48.4"/>
+			<Category name="phone"/>
+			<Category name="vocoid"/>
+			<Category name="voiced"/>
+		</Phone>
+
+		<Phone name="ah">
+			<Parameter name="microInt" value="0.0"/>
+			<Parameter name="glotVol" value="60.0"/>
+			<Parameter name="aspVol" value="0.0"/>
+			<Parameter name="fricVol" value="0.0"/>
+			<Parameter name="fricPos" value="5.5"/>
+			<Parameter name="fricCF" value="2500.0"/>
+			<Parameter name="fricBW" value="500.0"/>
+			<Parameter name="r1" value="0.8"/>
+			<Parameter name="r2" value="0.65"/>
+			<Parameter name="r3" value="0.45"/>
+			<Parameter name="r4" value="0.94"/>
+			<Parameter name="r5" value="1.1"/>
+			<Parameter name="r6" value="1.52"/>
+			<Parameter name="r7" value="1.46"/>
+			<Parameter name="r8" value="2.45"/>
+			<Parameter name="velum" value="0.1"/>
+			<Symbol name="duration" value="65.4"/>
+			<Symbol name="transition" value="27.8"/>
+			<Symbol name="qssa" value="20.1"/>
+			<Symbol name="qssb" value="20.1"/>
+			<Category name="phone"/>
+			<Category name="vocoid"/>
+			<Category name="voiced"/>
+		</Phone>
+
+		<Phone name="ah'" comment="This primed version was shortened since the original data was statistically invalid (too few samples).  We simply substituted the durations from uh'.">
+			<Parameter name="microInt" value="0.0"/>
+			<Parameter name="glotVol" value="60.0"/>
+			<Parameter name="aspVol" value="0.0"/>
+			<Parameter name="fricVol" value="0.0"/>
+			<Parameter name="fricPos" value="5.5"/>
+			<Parameter name="fricCF" value="2500.0"/>
+			<Parameter name="fricBW" value="500.0"/>
+			<Parameter name="r1" value="0.8"/>
+			<Parameter name="r2" value="0.65"/>
+			<Parameter name="r3" value="0.45"/>
+			<Parameter name="r4" value="0.94"/>
+			<Parameter name="r5" value="1.1"/>
+			<Parameter name="r6" value="1.52"/>
+			<Parameter name="r7" value="1.46"/>
+			<Parameter name="r8" value="2.45"/>
+			<Parameter name="velum" value="0.1"/>
+			<Symbol name="duration" value="118.5"/>
+			<Symbol name="transition" value="27.8"/>
+			<Symbol name="qssa" value="46.6"/>
+			<Symbol name="qssb" value="46.6"/>
+			<Category name="phone"/>
+			<Category name="vocoid"/>
+			<Category name="voiced"/>
+		</Phone>
+
+		<Phone name="an">
+			<Parameter name="microInt" value="0.0"/>
+			<Parameter name="glotVol" value="60.0"/>
+			<Parameter name="aspVol" value="0.0"/>
+			<Parameter name="fricVol" value="0.0"/>
+			<Parameter name="fricPos" value="5.5"/>
+			<Parameter name="fricCF" value="2500.0"/>
+			<Parameter name="fricBW" value="500.0"/>
+			<Parameter name="r1" value="0.8"/>
+			<Parameter name="r2" value="0.52"/>
+			<Parameter name="r3" value="0.45"/>
+			<Parameter name="r4" value="0.79"/>
+			<Parameter name="r5" value="1.49"/>
+			<Parameter name="r6" value="1.67"/>
+			<Parameter name="r7" value="1.02"/>
+			<Parameter name="r8" value="1.59"/>
+			<Parameter name="velum" value="1.5"/>
+			<Symbol name="duration" value="106.8"/>
+			<Symbol name="transition" value="27.8"/>
+			<Symbol name="qssa" value="40.8"/>
+			<Symbol name="qssb" value="40.8"/>
+			<Category name="phone"/>
+			<Category name="vocoid"/>
+			<Category name="voiced"/>
+		</Phone>
+
+		<Phone name="an'">
+			<Parameter name="microInt" value="0.0"/>
+			<Parameter name="glotVol" value="60.0"/>
+			<Parameter name="aspVol" value="0.0"/>
+			<Parameter name="fricVol" value="0.0"/>
+			<Parameter name="fricPos" value="5.5"/>
+			<Parameter name="fricCF" value="2500.0"/>
+			<Parameter name="fricBW" value="500.0"/>
+			<Parameter name="r1" value="0.8"/>
+			<Parameter name="r2" value="0.52"/>
+			<Parameter name="r3" value="0.45"/>
+			<Parameter name="r4" value="0.79"/>
+			<Parameter name="r5" value="1.49"/>
+			<Parameter name="r6" value="1.67"/>
+			<Parameter name="r7" value="1.02"/>
+			<Parameter name="r8" value="1.59"/>
+			<Parameter name="velum" value="1.5"/>
+			<Symbol name="duration" value="181.6"/>
+			<Symbol name="transition" value="27.8"/>
+			<Symbol name="qssa" value="78.2"/>
+			<Symbol name="qssb" value="78.2"/>
+			<Category name="phone"/>
+			<Category name="vocoid"/>
+			<Category name="voiced"/>
+		</Phone>
+
+		<Phone name="ar">
+			<Parameter name="microInt" value="0.0"/>
+			<Parameter name="glotVol" value="60.0"/>
+			<Parameter name="aspVol" value="0.0"/>
+			<Parameter name="fricVol" value="0.0"/>
+			<Parameter name="fricPos" value="5.5"/>
+			<Parameter name="fricCF" value="2500.0"/>
+			<Parameter name="fricBW" value="500.0"/>
+			<Parameter name="r1" value="0.8"/>
+			<Parameter name="r2" value="0.52"/>
+			<Parameter name="r3" value="0.45"/>
+			<Parameter name="r4" value="0.79"/>
+			<Parameter name="r5" value="1.49"/>
+			<Parameter name="r6" value="1.67"/>
+			<Parameter name="r7" value="1.02"/>
+			<Parameter name="r8" value="1.59"/>
+			<Parameter name="velum" value="0.1"/>
+			<Symbol name="duration" value="106.8"/>
+			<Symbol name="transition" value="27.8"/>
+			<Symbol name="qssa" value="40.8"/>
+			<Symbol name="qssb" value="40.8"/>
+			<Category name="phone"/>
+			<Category name="vocoid"/>
+			<Category name="voiced"/>
+		</Phone>
+
+		<Phone name="ar'">
+			<Parameter name="microInt" value="0.0"/>
+			<Parameter name="glotVol" value="60.0"/>
+			<Parameter name="aspVol" value="0.0"/>
+			<Parameter name="fricVol" value="0.0"/>
+			<Parameter name="fricPos" value="5.5"/>
+			<Parameter name="fricCF" value="2500.0"/>
+			<Parameter name="fricBW" value="500.0"/>
+			<Parameter name="r1" value="0.8"/>
+			<Parameter name="r2" value="0.52"/>
+			<Parameter name="r3" value="0.45"/>
+			<Parameter name="r4" value="0.79"/>
+			<Parameter name="r5" value="1.49"/>
+			<Parameter name="r6" value="1.67"/>
+			<Parameter name="r7" value="1.02"/>
+			<Parameter name="r8" value="1.59"/>
+			<Parameter name="velum" value="0.1"/>
+			<Symbol name="duration" value="181.6"/>
+			<Symbol name="transition" value="27.8"/>
+			<Symbol name="qssa" value="78.2"/>
+			<Symbol name="qssb" value="78.2"/>
+			<Category name="phone"/>
+			<Category name="vocoid"/>
+			<Category name="voiced"/>
+		</Phone>
+
+		<Phone name="aw">
+			<Parameter name="microInt" value="0.0"/>
+			<Parameter name="glotVol" value="60.0"/>
+			<Parameter name="aspVol" value="0.0"/>
+			<Parameter name="fricVol" value="0.0"/>
+			<Parameter name="fricPos" value="5.5"/>
+			<Parameter name="fricCF" value="2500.0"/>
+			<Parameter name="fricBW" value="500.0"/>
+			<Parameter name="r1" value="0.8"/>
+			<Parameter name="r2" value="1.1"/>
+			<Parameter name="r3" value="0.94"/>
+			<Parameter name="r4" value="0.42"/>
+			<Parameter name="r5" value="1.49"/>
+			<Parameter name="r6" value="1.67"/>
+			<Parameter name="r7" value="1.78"/>
+			<Parameter name="r8" value="1.05"/>
+			<Parameter name="velum" value="0.1"/>
+			<Symbol name="duration" value="114.0"/>
+			<Symbol name="transition" value="27.8"/>
+			<Symbol name="qssa" value="44.4"/>
+			<Symbol name="qssb" value="44.4"/>
+			<Category name="phone"/>
+			<Category name="vocoid"/>
+			<Category name="voiced"/>
+		</Phone>
+
+		<Phone name="aw'">
+			<Parameter name="microInt" value="0.0"/>
+			<Parameter name="glotVol" value="60.0"/>
+			<Parameter name="aspVol" value="0.0"/>
+			<Parameter name="fricVol" value="0.0"/>
+			<Parameter name="fricPos" value="5.5"/>
+			<Parameter name="fricCF" value="2500.0"/>
+			<Parameter name="fricBW" value="500.0"/>
+			<Parameter name="r1" value="0.8"/>
+			<Parameter name="r2" value="1.1"/>
+			<Parameter name="r3" value="0.94"/>
+			<Parameter name="r4" value="0.42"/>
+			<Parameter name="r5" value="1.49"/>
+			<Parameter name="r6" value="1.67"/>
+			<Parameter name="r7" value="1.78"/>
+			<Parameter name="r8" value="1.05"/>
+			<Parameter name="velum" value="0.1"/>
+			<Symbol name="duration" value="194.0"/>
+			<Symbol name="transition" value="27.8"/>
+			<Symbol name="qssa" value="84.4"/>
+			<Symbol name="qssb" value="84.4"/>
+			<Category name="phone"/>
+			<Category name="vocoid"/>
+			<Category name="voiced"/>
+		</Phone>
+
+		<Phone name="b">
+			<Parameter name="microInt" value="-2.0"/>
+			<Parameter name="glotVol" value="43.5"/>
+			<Parameter name="aspVol" value="0.0"/>
+			<Parameter name="fricVol" value="0.0"/>
+			<Parameter name="fricPos" value="7.0"/>
+			<Parameter name="fricCF" value="2000.0"/>
+			<Parameter name="fricBW" value="700.0"/>
+			<Parameter name="r1" value="0.8"/>
+			<Parameter name="r2" value="0.89"/>
+			<Parameter name="r3" value="0.76"/>
+			<Parameter name="r4" value="1.28"/>
+			<Parameter name="r5" value="1.8"/>
+			<Parameter name="r6" value="0.99"/>
+			<Parameter name="r7" value="0.84"/>
+			<Parameter name="r8" value="0.1"/>
+			<Parameter name="velum" value="0.1"/>
+			<Symbol name="duration" value="61.0"/>
+			<Symbol name="transition" value="24.0"/>
+			<Symbol name="qssa" value="30.5"/>
+			<Symbol name="qssb" value="30.5"/>
+			<Category name="phone"/>
+			<Category name="contoid"/>
+			<Category name="stopped"/>
+			<Category name="checked"/>
+			<Category name="voiced"/>
+			<Category name="lhack"/>
+		</Phone>
+
+		<Phone name="b'">
+			<Parameter name="microInt" value="-2.0"/>
+			<Parameter name="glotVol" value="43.5"/>
+			<Parameter name="aspVol" value="0.0"/>
+			<Parameter name="fricVol" value="0.0"/>
+			<Parameter name="fricPos" value="7.0"/>
+			<Parameter name="fricCF" value="2000.0"/>
+			<Parameter name="fricBW" value="700.0"/>
+			<Parameter name="r1" value="0.8"/>
+			<Parameter name="r2" value="0.89"/>
+			<Parameter name="r3" value="0.76"/>
+			<Parameter name="r4" value="1.28"/>
+			<Parameter name="r5" value="1.8"/>
+			<Parameter name="r6" value="0.99"/>
+			<Parameter name="r7" value="0.84"/>
+			<Parameter name="r8" value="0.1"/>
+			<Parameter name="velum" value="0.1"/>
+			<Symbol name="duration" value="70.8"/>
+			<Symbol name="transition" value="24.0"/>
+			<Symbol name="qssa" value="35.4"/>
+			<Symbol name="qssb" value="35.4"/>
+			<Category name="phone"/>
+			<Category name="contoid"/>
+			<Category name="stopped"/>
+			<Category name="checked"/>
+			<Category name="voiced"/>
+			<Category name="lhack"/>
+		</Phone>
+
+		<Phone name="bx">
+			<Parameter name="microInt" value="-2.0"/>
+			<Parameter name="glotVol" value="43.5"/>
+			<Parameter name="aspVol" value="0.0"/>
+			<Parameter name="fricVol" value="0.0"/>
+			<Parameter name="fricPos" value="7.0"/>
+			<Parameter name="fricCF" value="2000.0"/>
+			<Parameter name="fricBW" value="700.0"/>
+			<Parameter name="r1" value="0.8"/>
+			<Parameter name="r2" value="0.89"/>
+			<Parameter name="r3" value="0.76"/>
+			<Parameter name="r4" value="1.28"/>
+			<Parameter name="r5" value="1.8"/>
+			<Parameter name="r6" value="0.99"/>
+			<Parameter name="r7" value="0.84"/>
+			<Parameter name="r8" value="0.1"/>
+			<Parameter name="velum" value="0.1"/>
+			<Symbol name="duration" value="74.0"/>
+			<Symbol name="transition" value="21.5"/>
+			<Symbol name="qssa" value="37.0"/>
+			<Symbol name="qssb" value="37.0"/>
+			<Category name="contoid"/>
+			<Category name="phone"/>
+			<Category name="checked"/>
+			<Category name="voiced"/>
+			<Category name="stopped"/>
+			<Category name="lhack"/>
+		</Phone>
+
+		<Phone name="bx'">
+			<Parameter name="microInt" value="-2.0"/>
+			<Parameter name="glotVol" value="43.5"/>
+			<Parameter name="aspVol" value="0.0"/>
+			<Parameter name="fricVol" value="0.0"/>
+			<Parameter name="fricPos" value="7.0"/>
+			<Parameter name="fricCF" value="2000.0"/>
+			<Parameter name="fricBW" value="700.0"/>
+			<Parameter name="r1" value="0.8"/>
+			<Parameter name="r2" value="0.89"/>
+			<Parameter name="r3" value="0.76"/>
+			<Parameter name="r4" value="1.28"/>
+			<Parameter name="r5" value="1.8"/>
+			<Parameter name="r6" value="0.99"/>
+			<Parameter name="r7" value="0.84"/>
+			<Parameter name="r8" value="0.1"/>
+			<Parameter name="velum" value="0.1"/>
+			<Symbol name="duration" value="94.0"/>
+			<Symbol name="transition" value="21.5"/>
+			<Symbol name="qssa" value="47.0"/>
+			<Symbol name="qssb" value="47.0"/>
+			<Category name="phone"/>
+			<Category name="contoid"/>
+			<Category name="stopped"/>
+			<Category name="checked"/>
+			<Category name="voiced"/>
+			<Category name="lhack"/>
+		</Phone>
+
+		<Phone name="ch" comment="">
+			<Parameter name="microInt" value="-2.0"/>
+			<Parameter name="glotVol" value="0.0"/>
+			<Parameter name="aspVol" value="0.0"/>
+			<Parameter name="fricVol" value="0.0"/>
+			<Parameter name="fricPos" value="5.6"/>
+			<Parameter name="fricCF" value="2500.0"/>
+			<Parameter name="fricBW" value="2600.0"/>
+			<Parameter name="r1" value="0.8"/>
+			<Parameter name="r2" value="1.36"/>
+			<Parameter name="r3" value="1.74"/>
+			<Parameter name="r4" value="1.87"/>
+			<Parameter name="r5" value="0.94"/>
+			<Parameter name="r6" value="0.1"/>
+			<Parameter name="r7" value="0.79"/>
+			<Parameter name="r8" value="0.79"/>
+			<Parameter name="velum" value="0.1"/>
+			<Symbol name="duration" value="118.6"/>
+			<Symbol name="transition" value="24.2"/>
+			<Symbol name="qssa" value="59.3"/>
+			<Symbol name="qssb" value="59.3"/>
+			<Category name="phone"/>
+			<Category name="contoid"/>
+			<Category name="checked"/>
+			<Category name="voiced"/>
+			<Category name="affricate"/>
+			<Category name="lhack"/>
+		</Phone>
+
+		<Phone name="ch'" comment="">
+			<Parameter name="microInt" value="-2.0"/>
+			<Parameter name="glotVol" value="0.0"/>
+			<Parameter name="aspVol" value="0.0"/>
+			<Parameter name="fricVol" value="0.0"/>
+			<Parameter name="fricPos" value="5.6"/>
+			<Parameter name="fricCF" value="2500.0"/>
+			<Parameter name="fricBW" value="2600.0"/>
+			<Parameter name="r1" value="0.8"/>
+			<Parameter name="r2" value="1.36"/>
+			<Parameter name="r3" value="1.74"/>
+			<Parameter name="r4" value="1.87"/>
+			<Parameter name="r5" value="0.94"/>
+			<Parameter name="r6" value="0.1"/>
+			<Parameter name="r7" value="0.79"/>
+			<Parameter name="r8" value="0.79"/>
+			<Parameter name="velum" value="0.1"/>
+			<Symbol name="duration" value="118.8"/>
+			<Symbol name="transition" value="62.0"/>
+			<Symbol name="qssa" value="59.4"/>
+			<Symbol name="qssb" value="59.4"/>
+			<Category name="phone"/>
+			<Category name="contoid"/>
+			<Category name="affricate"/>
+			<Category name="checked"/>
+			<Category name="lhack"/>
+		</Phone>
+
+		<Phone name="d">
+			<Parameter name="microInt" value="-2.0"/>
+			<Parameter name="glotVol" value="43.5"/>
+			<Parameter name="aspVol" value="0.0"/>
+			<Parameter name="fricVol" value="0.0"/>
+			<Parameter name="fricPos" value="6.7"/>
+			<Parameter name="fricCF" value="4500.0"/>
+			<Parameter name="fricBW" value="2000.0"/>
+			<Parameter name="r1" value="0.8"/>
+			<Parameter name="r2" value="1.31"/>
+			<Parameter name="r3" value="1.49"/>
+			<Parameter name="r4" value="1.25"/>
+			<Parameter name="r5" value="0.76"/>
+			<Parameter name="r6" value="0.1"/>
+			<Parameter name="r7" value="1.44"/>
+			<Parameter name="r8" value="1.3"/>
+			<Parameter name="velum" value="0.1"/>
+			<Symbol name="duration" value="45.6"/>
+			<Symbol name="transition" value="28.0"/>
+			<Symbol name="qssa" value="22.8"/>
+			<Symbol name="qssb" value="22.8"/>
+			<Category name="phone"/>
+			<Category name="contoid"/>
+			<Category name="stopped"/>
+			<Category name="checked"/>
+			<Category name="voiced"/>
+			<Category name="lhack"/>
+		</Phone>
+
+		<Phone name="d'">
+			<Parameter name="microInt" value="-2.0"/>
+			<Parameter name="glotVol" value="43.5"/>
+			<Parameter name="aspVol" value="0.0"/>
+			<Parameter name="fricVol" value="0.0"/>
+			<Parameter name="fricPos" value="6.7"/>
+			<Parameter name="fricCF" value="4500.0"/>
+			<Parameter name="fricBW" value="2000.0"/>
+			<Parameter name="r1" value="0.8"/>
+			<Parameter name="r2" value="1.31"/>
+			<Parameter name="r3" value="1.49"/>
+			<Parameter name="r4" value="1.25"/>
+			<Parameter name="r5" value="0.76"/>
+			<Parameter name="r6" value="0.1"/>
+			<Parameter name="r7" value="1.44"/>
+			<Parameter name="r8" value="1.31"/>
+			<Parameter name="velum" value="0.1"/>
+			<Symbol name="duration" value="73.2"/>
+			<Symbol name="transition" value="28.0"/>
+			<Symbol name="qssa" value="36.6"/>
+			<Symbol name="qssb" value="36.6"/>
+			<Category name="phone"/>
+			<Category name="contoid"/>
+			<Category name="voiced"/>
+			<Category name="checked"/>
+			<Category name="stopped"/>
+			<Category name="lhack"/>
+		</Phone>
+
+		<Phone name="dh">
+			<Parameter name="microInt" value="-1.0"/>
+			<Parameter name="glotVol" value="54.0"/>
+			<Parameter name="aspVol" value="0.0"/>
+			<Parameter name="fricVol" value="0.25"/>
+			<Parameter name="fricPos" value="6.0"/>
+			<Parameter name="fricCF" value="4400.0"/>
+			<Parameter name="fricBW" value="4500.0"/>
+			<Parameter name="r1" value="0.8"/>
+			<Parameter name="r2" value="1.2"/>
+			<Parameter name="r3" value="1.5"/>
+			<Parameter name="r4" value="1.35"/>
+			<Parameter name="r5" value="1.2"/>
+			<Parameter name="r6" value="1.2"/>
+			<Parameter name="r7" value="0.4"/>
+			<Parameter name="r8" value="1.0"/>
+			<Parameter name="velum" value="0.1"/>
+			<Symbol name="duration" value="41.4"/>
+			<Symbol name="transition" value="44.0"/>
+			<Symbol name="qssa" value="20.7"/>
+			<Symbol name="qssb" value="20.7"/>
+			<Category name="phone"/>
+			<Category name="contoid"/>
+			<Category name="fricative"/>
+			<Category name="checked"/>
+			<Category name="voiced"/>
+			<Category name="whistlehack"/>
+			<Category name="lhack"/>
+		</Phone>
+
+		<Phone name="dh'">
+			<Parameter name="microInt" value="-1.0"/>
+			<Parameter name="glotVol" value="54.0"/>
+			<Parameter name="aspVol" value="0.0"/>
+			<Parameter name="fricVol" value="0.25"/>
+			<Parameter name="fricPos" value="6.0"/>
+			<Parameter name="fricCF" value="4400.0"/>
+			<Parameter name="fricBW" value="4500.0"/>
+			<Parameter name="r1" value="0.8"/>
+			<Parameter name="r2" value="1.2"/>
+			<Parameter name="r3" value="1.5"/>
+			<Parameter name="r4" value="1.35"/>
+			<Parameter name="r5" value="1.2"/>
+			<Parameter name="r6" value="1.2"/>
+			<Parameter name="r7" value="0.4"/>
+			<Parameter name="r8" value="1.0"/>
+			<Parameter name="velum" value="0.1"/>
+			<Symbol name="duration" value="41.4"/>
+			<Symbol name="transition" value="44.0"/>
+			<Symbol name="qssa" value="20.7"/>
+			<Symbol name="qssb" value="20.7"/>
+			<Category name="phone"/>
+			<Category name="contoid"/>
+			<Category name="fricative"/>
+			<Category name="checked"/>
+			<Category name="voiced"/>
+			<Category name="whistlehack"/>
+			<Category name="lhack"/>
+		</Phone>
+
+		<Phone name="dx">
+			<Parameter name="microInt" value="-2.0"/>
+			<Parameter name="glotVol" value="43.5"/>
+			<Parameter name="aspVol" value="0.0"/>
+			<Parameter name="fricVol" value="0.0"/>
+			<Parameter name="fricPos" value="6.7"/>
+			<Parameter name="fricCF" value="4500.0"/>
+			<Parameter name="fricBW" value="2000.0"/>
+			<Parameter name="r1" value="0.8"/>
+			<Parameter name="r2" value="1.31"/>
+			<Parameter name="r3" value="1.49"/>
+			<Parameter name="r4" value="1.25"/>
+			<Parameter name="r5" value="0.76"/>
+			<Parameter name="r6" value="0.1"/>
+			<Parameter name="r7" value="1.44"/>
+			<Parameter name="r8" value="1.31"/>
+			<Parameter name="velum" value="0.1"/>
+			<Symbol name="duration" value="51.6"/>
+			<Symbol name="transition" value="28.5"/>
+			<Symbol name="qssa" value="25.8"/>
+			<Symbol name="qssb" value="25.8"/>
+			<Category name="phone"/>
+			<Category name="contoid"/>
+			<Category name="stopped"/>
+			<Category name="checked"/>
+			<Category name="voiced"/>
+			<Category name="lhack"/>
+		</Phone>
+
+		<Phone name="dx'">
+			<Parameter name="microInt" value="-2.0"/>
+			<Parameter name="glotVol" value="43.5"/>
+			<Parameter name="aspVol" value="0.0"/>
+			<Parameter name="fricVol" value="0.0"/>
+			<Parameter name="fricPos" value="6.7"/>
+			<Parameter name="fricCF" value="4500.0"/>
+			<Parameter name="fricBW" value="2000.0"/>
+			<Parameter name="r1" value="0.8"/>
+			<Parameter name="r2" value="1.31"/>
+			<Parameter name="r3" value="1.49"/>
+			<Parameter name="r4" value="1.25"/>
+			<Parameter name="r5" value="0.76"/>
+			<Parameter name="r6" value="0.1"/>
+			<Parameter name="r7" value="1.44"/>
+			<Parameter name="r8" value="1.31"/>
+			<Parameter name="velum" value="0.1"/>
+			<Symbol name="duration" value="65.4"/>
+			<Symbol name="transition" value="28.5"/>
+			<Symbol name="qssa" value="32.7"/>
+			<Symbol name="qssb" value="32.7"/>
+			<Category name="phone"/>
+			<Category name="contoid"/>
+			<Category name="stopped"/>
+			<Category name="checked"/>
+			<Category name="voiced"/>
+			<Category name="lhack"/>
+		</Phone>
+
+		<Phone name="e">
+			<Parameter name="microInt" value="0.0"/>
+			<Parameter name="glotVol" value="60.0"/>
+			<Parameter name="aspVol" value="0.0"/>
+			<Parameter name="fricVol" value="0.0"/>
+			<Parameter name="fricPos" value="5.5"/>
+			<Parameter name="fricCF" value="2500.0"/>
+			<Parameter name="fricBW" value="500.0"/>
+			<Parameter name="r1" value="0.8"/>
+			<Parameter name="r2" value="0.68"/>
+			<Parameter name="r3" value="1.12"/>
+			<Parameter name="r4" value="1.695"/>
+			<Parameter name="r5" value="1.385"/>
+			<Parameter name="r6" value="1.07"/>
+			<Parameter name="r7" value="1.045"/>
+			<Parameter name="r8" value="2.06"/>
+			<Parameter name="velum" value="0.1"/>
+			<Symbol name="duration" value="61.0"/>
+			<Symbol name="transition" value="27.8"/>
+			<Symbol name="qssa" value="17.9"/>
+			<Symbol name="qssb" value="17.9"/>
+			<Category name="phone"/>
+			<Category name="vocoid"/>
+			<Category name="voiced"/>
+		</Phone>
+
+		<Phone name="e'">
+			<Parameter name="microInt" value="0.0"/>
+			<Parameter name="glotVol" value="60.0"/>
+			<Parameter name="aspVol" value="0.0"/>
+			<Parameter name="fricVol" value="0.0"/>
+			<Parameter name="fricPos" value="5.5"/>
+			<Parameter name="fricCF" value="2500.0"/>
+			<Parameter name="fricBW" value="500.0"/>
+			<Parameter name="r1" value="0.8"/>
+			<Parameter name="r2" value="0.68"/>
+			<Parameter name="r3" value="1.12"/>
+			<Parameter name="r4" value="1.695"/>
+			<Parameter name="r5" value="1.385"/>
+			<Parameter name="r6" value="1.07"/>
+			<Parameter name="r7" value="1.045"/>
+			<Parameter name="r8" value="2.06"/>
+			<Parameter name="velum" value="0.1"/>
+			<Symbol name="duration" value="77.6"/>
+			<Symbol name="transition" value="27.8"/>
+			<Symbol name="qssa" value="26.2"/>
+			<Symbol name="qssb" value="26.2"/>
+			<Category name="phone"/>
+			<Category name="vocoid"/>
+			<Category name="voiced"/>
+		</Phone>
+
+		<Phone name="ee">
+			<Parameter name="microInt" value="0.0"/>
+			<Parameter name="glotVol" value="60.0"/>
+			<Parameter name="aspVol" value="0.0"/>
+			<Parameter name="fricVol" value="0.0"/>
+			<Parameter name="fricPos" value="5.5"/>
+			<Parameter name="fricCF" value="2500.0"/>
+			<Parameter name="fricBW" value="500.0"/>
+			<Parameter name="r1" value="0.8"/>
+			<Parameter name="r2" value="1.67"/>
+			<Parameter name="r3" value="1.905"/>
+			<Parameter name="r4" value="1.985"/>
+			<Parameter name="r5" value="0.81"/>
+			<Parameter name="r6" value="0.495"/>
+			<Parameter name="r7" value="0.73"/>
+			<Parameter name="r8" value="1.485"/>
+			<Parameter name="velum" value="0.1"/>
+			<Symbol name="duration" value="82.4"/>
+			<Symbol name="transition" value="27.8"/>
+			<Symbol name="qssa" value="28.6"/>
+			<Symbol name="qssb" value="28.6"/>
+			<Category name="phone"/>
+			<Category name="vocoid"/>
+			<Category name="voiced"/>
+		</Phone>
+
+		<Phone name="ee'">
+			<Parameter name="microInt" value="0.0"/>
+			<Parameter name="glotVol" value="60.0"/>
+			<Parameter name="aspVol" value="0.0"/>
+			<Parameter name="fricVol" value="0.0"/>
+			<Parameter name="fricPos" value="5.5"/>
+			<Parameter name="fricCF" value="2500.0"/>
+			<Parameter name="fricBW" value="500.0"/>
+			<Parameter name="r1" value="0.8"/>
+			<Parameter name="r2" value="1.67"/>
+			<Parameter name="r3" value="1.905"/>
+			<Parameter name="r4" value="1.985"/>
+			<Parameter name="r5" value="0.81"/>
+			<Parameter name="r6" value="0.495"/>
+			<Parameter name="r7" value="0.73"/>
+			<Parameter name="r8" value="1.485"/>
+			<Parameter name="velum" value="0.1"/>
+			<Symbol name="duration" value="141.8"/>
+			<Symbol name="transition" value="27.8"/>
+			<Symbol name="qssa" value="58.3"/>
+			<Symbol name="qssb" value="58.3"/>
+			<Category name="phone"/>
+			<Category name="vocoid"/>
+			<Category name="voiced"/>
+		</Phone>
+
+		<Phone name="er">
+			<Parameter name="microInt" value="0.0"/>
+			<Parameter name="glotVol" value="60.0"/>
+			<Parameter name="aspVol" value="0.0"/>
+			<Parameter name="fricVol" value="0.0"/>
+			<Parameter name="fricPos" value="5.5"/>
+			<Parameter name="fricCF" value="2500.0"/>
+			<Parameter name="fricBW" value="500.0"/>
+			<Parameter name="r1" value="0.8"/>
+			<Parameter name="r2" value="0.885"/>
+			<Parameter name="r3" value="0.99"/>
+			<Parameter name="r4" value="0.81"/>
+			<Parameter name="r5" value="0.755"/>
+			<Parameter name="r6" value="1.045"/>
+			<Parameter name="r7" value="1.225"/>
+			<Parameter name="r8" value="1.12"/>
+			<Parameter name="velum" value="0.1"/>
+			<Symbol name="duration" value="132.2"/>
+			<Symbol name="transition" value="27.8"/>
+			<Symbol name="qssa" value="53.5"/>
+			<Symbol name="qssb" value="53.5"/>
+			<Category name="phone"/>
+			<Category name="vocoid"/>
+			<Category name="voiced"/>
+		</Phone>
+
+		<Phone name="er'">
+			<Parameter name="microInt" value="0.0"/>
+			<Parameter name="glotVol" value="60.0"/>
+			<Parameter name="aspVol" value="0.0"/>
+			<Parameter name="fricVol" value="0.0"/>
+			<Parameter name="fricPos" value="5.5"/>
+			<Parameter name="fricCF" value="2500.0"/>
+			<Parameter name="fricBW" value="500.0"/>
+			<Parameter name="r1" value="0.8"/>
+			<Parameter name="r2" value="0.885"/>
+			<Parameter name="r3" value="0.99"/>
+			<Parameter name="r4" value="0.81"/>
+			<Parameter name="r5" value="0.755"/>
+			<Parameter name="r6" value="1.045"/>
+			<Parameter name="r7" value="1.225"/>
+			<Parameter name="r8" value="1.12"/>
+			<Parameter name="velum" value="0.1"/>
+			<Symbol name="duration" value="167.6"/>
+			<Symbol name="transition" value="27.8"/>
+			<Symbol name="qssa" value="71.2"/>
+			<Symbol name="qssb" value="71.2"/>
+			<Category name="phone"/>
+			<Category name="vocoid"/>
+			<Category name="voiced"/>
+		</Phone>
+
+		<Phone name="f">
+			<Parameter name="microInt" value="-1.0"/>
+			<Parameter name="glotVol" value="0.0"/>
+			<Parameter name="aspVol" value="0.0"/>
+			<Parameter name="fricVol" value="0.5"/>
+			<Parameter name="fricPos" value="7.0"/>
+			<Parameter name="fricCF" value="3300.0"/>
+			<Parameter name="fricBW" value="1000.0"/>
+			<Parameter name="r1" value="0.8"/>
+			<Parameter name="r2" value="0.89"/>
+			<Parameter name="r3" value="0.99"/>
+			<Parameter name="r4" value="0.81"/>
+			<Parameter name="r5" value="0.76"/>
+			<Parameter name="r6" value="0.89"/>
+			<Parameter name="r7" value="0.84"/>
+			<Parameter name="r8" value="0.5"/>
+			<Parameter name="velum" value="0.1"/>
+			<Symbol name="duration" value="70.0"/>
+			<Symbol name="transition" value="40.0"/>
+			<Symbol name="qssa" value="35.0"/>
+			<Symbol name="qssb" value="35.0"/>
+			<Category name="phone"/>
+			<Category name="contoid"/>
+			<Category name="fricative"/>
+			<Category name="checked"/>
+			<Category name="whistlehack"/>
+			<Category name="lhack"/>
+		</Phone>
+
+		<Phone name="f'">
+			<Parameter name="microInt" value="-1.0"/>
+			<Parameter name="glotVol" value="0.0"/>
+			<Parameter name="aspVol" value="0.0"/>
+			<Parameter name="fricVol" value="0.5"/>
+			<Parameter name="fricPos" value="7.0"/>
+			<Parameter name="fricCF" value="3300.0"/>
+			<Parameter name="fricBW" value="1000.0"/>
+			<Parameter name="r1" value="0.8"/>
+			<Parameter name="r2" value="0.89"/>
+			<Parameter name="r3" value="0.99"/>
+			<Parameter name="r4" value="0.81"/>
+			<Parameter name="r5" value="0.76"/>
+			<Parameter name="r6" value="0.89"/>
+			<Parameter name="r7" value="0.84"/>
+			<Parameter name="r8" value="0.5"/>
+			<Parameter name="velum" value="0.1"/>
+			<Symbol name="duration" value="98.0"/>
+			<Symbol name="transition" value="40.0"/>
+			<Symbol name="qssa" value="49.0"/>
+			<Symbol name="qssb" value="49.0"/>
+			<Category name="phone"/>
+			<Category name="contoid"/>
+			<Category name="fricative"/>
+			<Category name="checked"/>
+			<Category name="whistlehack"/>
+			<Category name="lhack"/>
+		</Phone>
+
+		<Phone name="g">
+			<Parameter name="microInt" value="-2.0"/>
+			<Parameter name="glotVol" value="43.5"/>
+			<Parameter name="aspVol" value="0.0"/>
+			<Parameter name="fricVol" value="0.0"/>
+			<Parameter name="fricPos" value="4.7"/>
+			<Parameter name="fricCF" value="2000.0"/>
+			<Parameter name="fricBW" value="2000.0"/>
+			<Parameter name="r1" value="0.8"/>
+			<Parameter name="r2" value="1.7"/>
+			<Parameter name="r3" value="1.3"/>
+			<Parameter name="r4" value="0.99"/>
+			<Parameter name="r5" value="0.1"/>
+			<Parameter name="r6" value="1.07"/>
+			<Parameter name="r7" value="0.73"/>
+			<Parameter name="r8" value="1.49"/>
+			<Parameter name="velum" value="0.1"/>
+			<Symbol name="duration" value="53.4"/>
+			<Symbol name="transition" value="22.0"/>
+			<Symbol name="qssa" value="26.7"/>
+			<Symbol name="qssb" value="26.7"/>
+			<Category name="phone"/>
+			<Category name="contoid"/>
+			<Category name="stopped"/>
+			<Category name="checked"/>
+			<Category name="voiced"/>
+			<Category name="lhack"/>
+		</Phone>
+
+		<Phone name="g'">
+			<Parameter name="microInt" value="-2.0"/>
+			<Parameter name="glotVol" value="43.5"/>
+			<Parameter name="aspVol" value="0.0"/>
+			<Parameter name="fricVol" value="0.0"/>
+			<Parameter name="fricPos" value="4.7"/>
+			<Parameter name="fricCF" value="2000.0"/>
+			<Parameter name="fricBW" value="2000.0"/>
+			<Parameter name="r1" value="0.8"/>
+			<Parameter name="r2" value="1.7"/>
+			<Parameter name="r3" value="1.3"/>
+			<Parameter name="r4" value="0.99"/>
+			<Parameter name="r5" value="0.1"/>
+			<Parameter name="r6" value="1.07"/>
+			<Parameter name="r7" value="0.73"/>
+			<Parameter name="r8" value="1.49"/>
+			<Parameter name="velum" value="0.1"/>
+			<Symbol name="duration" value="68.2"/>
+			<Symbol name="transition" value="22.0"/>
+			<Symbol name="qssa" value="34.1"/>
+			<Symbol name="qssb" value="34.1"/>
+			<Category name="phone"/>
+			<Category name="contoid"/>
+			<Category name="stopped"/>
+			<Category name="checked"/>
+			<Category name="voiced"/>
+			<Category name="lhack"/>
+		</Phone>
+
+		<Phone name="gs">
+			<Parameter name="microInt" value="0.0"/>
+			<Parameter name="glotVol" value="0.0"/>
+			<Parameter name="aspVol" value="0.0"/>
+			<Parameter name="fricVol" value="0.0"/>
+			<Parameter name="fricPos" value="5.5"/>
+			<Parameter name="fricCF" value="2500.0"/>
+			<Parameter name="fricBW" value="500.0"/>
+			<Parameter name="r1" value="0.8"/>
+			<Parameter name="r2" value="0.8"/>
+			<Parameter name="r3" value="0.8"/>
+			<Parameter name="r4" value="0.8"/>
+			<Parameter name="r5" value="0.8"/>
+			<Parameter name="r6" value="0.8"/>
+			<Parameter name="r7" value="0.8"/>
+			<Parameter name="r8" value="0.8"/>
+			<Parameter name="velum" value="0.1"/>
+			<Symbol name="duration" value="70.0"/>
+			<Symbol name="transition" value="18.0"/>
+			<Symbol name="qssa" value="35.0"/>
+			<Symbol name="qssb" value="35.0"/>
+			<Category name="phone"/>
+			<Category name="silence"/>
+			<Category name="contoid"/>
+			<Category name="stopped"/>
+			<Category name="hlike"/>
+		</Phone>
+
+		<Phone name="gs'">
+			<Parameter name="microInt" value="0.0"/>
+			<Parameter name="glotVol" value="0.0"/>
+			<Parameter name="aspVol" value="0.0"/>
+			<Parameter name="fricVol" value="0.0"/>
+			<Parameter name="fricPos" value="5.5"/>
+			<Parameter name="fricCF" value="2500.0"/>
+			<Parameter name="fricBW" value="500.0"/>
+			<Parameter name="r1" value="0.8"/>
+			<Parameter name="r2" value="0.8"/>
+			<Parameter name="r3" value="0.8"/>
+			<Parameter name="r4" value="0.8"/>
+			<Parameter name="r5" value="0.8"/>
+			<Parameter name="r6" value="0.8"/>
+			<Parameter name="r7" value="0.8"/>
+			<Parameter name="r8" value="0.8"/>
+			<Parameter name="velum" value="0.1"/>
+			<Symbol name="duration" value="90.0"/>
+			<Symbol name="transition" value="18.0"/>
+			<Symbol name="qssa" value="45.0"/>
+			<Symbol name="qssb" value="45.0"/>
+			<Category name="phone"/>
+			<Category name="hlike"/>
+			<Category name="contoid"/>
+			<Category name="stopped"/>
+		</Phone>
+
+		<Phone name="h">
+			<Parameter name="microInt" value="0.0"/>
+			<Parameter name="glotVol" value="0.0"/>
+			<Parameter name="aspVol" value="10.0"/>
+			<Parameter name="fricVol" value="0.0"/>
+			<Parameter name="fricPos" value="5.5"/>
+			<Parameter name="fricCF" value="2500.0"/>
+			<Parameter name="fricBW" value="500.0"/>
+			<Parameter name="r1" value="0.8"/>
+			<Parameter name="r2" value="0.8"/>
+			<Parameter name="r3" value="0.8"/>
+			<Parameter name="r4" value="0.8"/>
+			<Parameter name="r5" value="0.8"/>
+			<Parameter name="r6" value="0.8"/>
+			<Parameter name="r7" value="0.8"/>
+			<Parameter name="r8" value="0.8"/>
+			<Parameter name="velum" value="0.1"/>
+			<Symbol name="duration" value="49.8"/>
+			<Symbol name="transition" value="27.8"/>
+			<Symbol name="qssa" value="24.9"/>
+			<Symbol name="qssb" value="24.9"/>
+			<Category name="phone"/>
+			<Category name="asp"/>
+			<Category name="hlike"/>
+			<Category name="contoid"/>
+		</Phone>
+
+		<Phone name="h'">
+			<Parameter name="microInt" value="0.0"/>
+			<Parameter name="glotVol" value="0.0"/>
+			<Parameter name="aspVol" value="10.0"/>
+			<Parameter name="fricVol" value="0.0"/>
+			<Parameter name="fricPos" value="5.5"/>
+			<Parameter name="fricCF" value="2500.0"/>
+			<Parameter name="fricBW" value="500.0"/>
+			<Parameter name="r1" value="0.8"/>
+			<Parameter name="r2" value="0.8"/>
+			<Parameter name="r3" value="0.8"/>
+			<Parameter name="r4" value="0.8"/>
+			<Parameter name="r5" value="0.8"/>
+			<Parameter name="r6" value="0.8"/>
+			<Parameter name="r7" value="0.8"/>
+			<Parameter name="r8" value="0.8"/>
+			<Parameter name="velum" value="0.1"/>
+			<Symbol name="duration" value="66.6"/>
+			<Symbol name="transition" value="27.8"/>
+			<Symbol name="qssa" value="33.3"/>
+			<Symbol name="qssb" value="33.3"/>
+			<Category name="phone"/>
+			<Category name="asp"/>
+			<Category name="contoid"/>
+			<Category name="hlike"/>
+		</Phone>
+
+		<Phone name="hh">
+			<Parameter name="microInt" value="0.0"/>
+			<Parameter name="glotVol" value="0.0"/>
+			<Parameter name="aspVol" value="10.0"/>
+			<Parameter name="fricVol" value="0.0"/>
+			<Parameter name="fricPos" value="1.0"/>
+			<Parameter name="fricCF" value="1000.0"/>
+			<Parameter name="fricBW" value="1000.0"/>
+			<Parameter name="r1" value="0.8"/>
+			<Parameter name="r2" value="0.24"/>
+			<Parameter name="r3" value="0.4"/>
+			<Parameter name="r4" value="0.81"/>
+			<Parameter name="r5" value="0.76"/>
+			<Parameter name="r6" value="1.05"/>
+			<Parameter name="r7" value="1.23"/>
+			<Parameter name="r8" value="1.12"/>
+			<Parameter name="velum" value="0.1"/>
+			<Symbol name="duration" value="63.8"/>
+			<Symbol name="transition" value="34.2"/>
+			<Symbol name="qssa" value="31.9"/>
+			<Symbol name="qssb" value="31.9"/>
+			<Category name="phone"/>
+			<Category name="contoid"/>
+			<Category name="fricative"/>
+		</Phone>
+
+		<Phone name="hh'">
+			<Parameter name="microInt" value="0.0"/>
+			<Parameter name="glotVol" value="0.0"/>
+			<Parameter name="aspVol" value="10.0"/>
+			<Parameter name="fricVol" value="0.0"/>
+			<Parameter name="fricPos" value="1.0"/>
+			<Parameter name="fricCF" value="1000.0"/>
+			<Parameter name="fricBW" value="1000.0"/>
+			<Parameter name="r1" value="0.8"/>
+			<Parameter name="r2" value="0.24"/>
+			<Parameter name="r3" value="0.4"/>
+			<Parameter name="r4" value="0.81"/>
+			<Parameter name="r5" value="0.76"/>
+			<Parameter name="r6" value="1.05"/>
+			<Parameter name="r7" value="1.23"/>
+			<Parameter name="r8" value="1.12"/>
+			<Parameter name="velum" value="0.1"/>
+			<Symbol name="duration" value="124.2"/>
+			<Symbol name="transition" value="24.2"/>
+			<Symbol name="qssa" value="62.1"/>
+			<Symbol name="qssb" value="62.1"/>
+			<Category name="phone"/>
+			<Category name="contoid"/>
+			<Category name="fricative"/>
+		</Phone>
+
+		<Phone name="hv">
+			<Parameter name="microInt" value="0.0"/>
+			<Parameter name="glotVol" value="42.0"/>
+			<Parameter name="aspVol" value="10.0"/>
+			<Parameter name="fricVol" value="0.0"/>
+			<Parameter name="fricPos" value="5.5"/>
+			<Parameter name="fricCF" value="2500.0"/>
+			<Parameter name="fricBW" value="500.0"/>
+			<Parameter name="r1" value="0.8"/>
+			<Parameter name="r2" value="0.8"/>
+			<Parameter name="r3" value="0.8"/>
+			<Parameter name="r4" value="0.8"/>
+			<Parameter name="r5" value="0.8"/>
+			<Parameter name="r6" value="0.8"/>
+			<Parameter name="r7" value="0.8"/>
+			<Parameter name="r8" value="0.8"/>
+			<Parameter name="velum" value="0.1"/>
+			<Symbol name="duration" value="49.8"/>
+			<Symbol name="transition" value="27.8"/>
+			<Symbol name="qssa" value="24.9"/>
+			<Symbol name="qssb" value="24.9"/>
+			<Category name="phone"/>
+			<Category name="asp"/>
+			<Category name="hlike"/>
+			<Category name="contoid"/>
+		</Phone>
+
+		<Phone name="hv'">
+			<Parameter name="microInt" value="0.0"/>
+			<Parameter name="glotVol" value="42.0"/>
+			<Parameter name="aspVol" value="10.0"/>
+			<Parameter name="fricVol" value="0.0"/>
+			<Parameter name="fricPos" value="5.5"/>
+			<Parameter name="fricCF" value="2500.0"/>
+			<Parameter name="fricBW" value="500.0"/>
+			<Parameter name="r1" value="0.8"/>
+			<Parameter name="r2" value="0.8"/>
+			<Parameter name="r3" value="0.8"/>
+			<Parameter name="r4" value="0.8"/>
+			<Parameter name="r5" value="0.8"/>
+			<Parameter name="r6" value="0.8"/>
+			<Parameter name="r7" value="0.8"/>
+			<Parameter name="r8" value="0.8"/>
+			<Parameter name="velum" value="0.1"/>
+			<Symbol name="duration" value="66.6"/>
+			<Symbol name="transition" value="27.8"/>
+			<Symbol name="qssa" value="33.3"/>
+			<Symbol name="qssb" value="33.3"/>
+			<Category name="phone"/>
+			<Category name="asp"/>
+			<Category name="contoid"/>
+			<Category name="hlike"/>
+		</Phone>
+
+		<Phone name="i" comment="Bumped qss values up to 30 from 14">
+			<Parameter name="microInt" value="0.0"/>
+			<Parameter name="glotVol" value="60.0"/>
+			<Parameter name="aspVol" value="0.0"/>
+			<Parameter name="fricVol" value="0.0"/>
+			<Parameter name="fricPos" value="5.5"/>
+			<Parameter name="fricCF" value="2500.0"/>
+			<Parameter name="fricBW" value="500.0"/>
+			<Parameter name="r1" value="0.8"/>
+			<Parameter name="r2" value="1.045"/>
+			<Parameter name="r3" value="1.565"/>
+			<Parameter name="r4" value="1.75"/>
+			<Parameter name="r5" value="0.94"/>
+			<Parameter name="r6" value="0.68"/>
+			<Parameter name="r7" value="0.785"/>
+			<Parameter name="r8" value="1.12"/>
+			<Parameter name="velum" value="0.1"/>
+			<Symbol name="duration" value="53.2"/>
+			<Symbol name="transition" value="27.8"/>
+			<Symbol name="qssa" value="14.0"/>
+			<Symbol name="qssb" value="14.0"/>
+			<Category name="phone"/>
+			<Category name="vocoid"/>
+			<Category name="voiced"/>
+		</Phone>
+
+		<Phone name="i'">
+			<Parameter name="microInt" value="0.0"/>
+			<Parameter name="glotVol" value="60.0"/>
+			<Parameter name="aspVol" value="0.0"/>
+			<Parameter name="fricVol" value="0.0"/>
+			<Parameter name="fricPos" value="5.5"/>
+			<Parameter name="fricCF" value="2500.0"/>
+			<Parameter name="fricBW" value="500.0"/>
+			<Parameter name="r1" value="0.8"/>
+			<Parameter name="r2" value="1.045"/>
+			<Parameter name="r3" value="1.565"/>
+			<Parameter name="r4" value="1.75"/>
+			<Parameter name="r5" value="0.94"/>
+			<Parameter name="r6" value="0.68"/>
+			<Parameter name="r7" value="0.785"/>
+			<Parameter name="r8" value="1.12"/>
+			<Parameter name="velum" value="0.1"/>
+			<Symbol name="duration" value="76.2"/>
+			<Symbol name="transition" value="27.8"/>
+			<Symbol name="qssa" value="25.5"/>
+			<Symbol name="qssb" value="25.5"/>
+			<Category name="phone"/>
+			<Category name="vocoid"/>
+			<Category name="voiced"/>
+		</Phone>
+
+		<Phone name="in">
+			<Parameter name="microInt" value="0.0"/>
+			<Parameter name="glotVol" value="60.0"/>
+			<Parameter name="aspVol" value="0.0"/>
+			<Parameter name="fricVol" value="0.0"/>
+			<Parameter name="fricPos" value="5.5"/>
+			<Parameter name="fricCF" value="2500.0"/>
+			<Parameter name="fricBW" value="500.0"/>
+			<Parameter name="r1" value="0.8"/>
+			<Parameter name="r2" value="0.65"/>
+			<Parameter name="r3" value="0.835"/>
+			<Parameter name="r4" value="1.15"/>
+			<Parameter name="r5" value="1.305"/>
+			<Parameter name="r6" value="1.59"/>
+			<Parameter name="r7" value="1.59"/>
+			<Parameter name="r8" value="2.61"/>
+			<Parameter name="velum" value="1.5"/>
+			<Symbol name="duration" value="84.0"/>
+			<Symbol name="transition" value="27.8"/>
+			<Symbol name="qssa" value="29.4"/>
+			<Symbol name="qssb" value="29.4"/>
+			<Category name="phone"/>
+			<Category name="vocoid"/>
+			<Category name="voiced"/>
+		</Phone>
+
+		<Phone name="in'">
+			<Parameter name="microInt" value="0.0"/>
+			<Parameter name="glotVol" value="60.0"/>
+			<Parameter name="aspVol" value="0.0"/>
+			<Parameter name="fricVol" value="0.0"/>
+			<Parameter name="fricPos" value="5.5"/>
+			<Parameter name="fricCF" value="2500.0"/>
+			<Parameter name="fricBW" value="500.0"/>
+			<Parameter name="r1" value="0.8"/>
+			<Parameter name="r2" value="0.65"/>
+			<Parameter name="r3" value="0.835"/>
+			<Parameter name="r4" value="1.15"/>
+			<Parameter name="r5" value="1.305"/>
+			<Parameter name="r6" value="1.59"/>
+			<Parameter name="r7" value="1.59"/>
+			<Parameter name="r8" value="2.61"/>
+			<Parameter name="velum" value="1.5"/>
+			<Symbol name="duration" value="122.0"/>
+			<Symbol name="transition" value="27.8"/>
+			<Symbol name="qssa" value="48.4"/>
+			<Symbol name="qssb" value="48.4"/>
+			<Category name="phone"/>
+			<Category name="vocoid"/>
+			<Category name="voiced"/>
+		</Phone>
+
+		<Phone name="j">
+			<Parameter name="microInt" value="-2.0"/>
+			<Parameter name="glotVol" value="48.0"/>
+			<Parameter name="aspVol" value="0.0"/>
+			<Parameter name="fricVol" value="0.0"/>
+			<Parameter name="fricPos" value="5.6"/>
+			<Parameter name="fricCF" value="2500.0"/>
+			<Parameter name="fricBW" value="2600.0"/>
+			<Parameter name="r1" value="0.8"/>
+			<Parameter name="r2" value="1.36"/>
+			<Parameter name="r3" value="1.74"/>
+			<Parameter name="r4" value="1.87"/>
+			<Parameter name="r5" value="0.94"/>
+			<Parameter name="r6" value="0.0"/>
+			<Parameter name="r7" value="0.79"/>
+			<Parameter name="r8" value="0.79"/>
+			<Parameter name="velum" value="0.1"/>
+			<Symbol name="duration" value="93.4"/>
+			<Symbol name="transition" value="24.2"/>
+			<Symbol name="qssa" value="46.7"/>
+			<Symbol name="qssb" value="46.7"/>
+			<Category name="phone"/>
+			<Category name="contoid"/>
+			<Category name="affricate"/>
+			<Category name="checked"/>
+			<Category name="voiced"/>
+			<Category name="lhack"/>
+		</Phone>
+
+		<Phone name="j'">
+			<Parameter name="microInt" value="-2.0"/>
+			<Parameter name="glotVol" value="48.0"/>
+			<Parameter name="aspVol" value="0.0"/>
+			<Parameter name="fricVol" value="0.0"/>
+			<Parameter name="fricPos" value="5.6"/>
+			<Parameter name="fricCF" value="2500.0"/>
+			<Parameter name="fricBW" value="2600.0"/>
+			<Parameter name="r1" value="0.8"/>
+			<Parameter name="r2" value="1.36"/>
+			<Parameter name="r3" value="1.74"/>
+			<Parameter name="r4" value="1.87"/>
+			<Parameter name="r5" value="0.94"/>
+			<Parameter name="r6" value="0.0"/>
+			<Parameter name="r7" value="0.79"/>
+			<Parameter name="r8" value="0.79"/>
+			<Parameter name="velum" value="0.1"/>
+			<Symbol name="duration" value="100.0"/>
+			<Symbol name="transition" value="24.2"/>
+			<Symbol name="qssa" value="50.0"/>
+			<Symbol name="qssb" value="50.0"/>
+			<Category name="phone"/>
+			<Category name="contoid"/>
+			<Category name="affricate"/>
+			<Category name="checked"/>
+			<Category name="voiced"/>
+			<Category name="lhack"/>
+		</Phone>
+
+		<Phone name="k">
+			<Parameter name="microInt" value="-10.0"/>
+			<Parameter name="glotVol" value="0.0"/>
+			<Parameter name="aspVol" value="0.0"/>
+			<Parameter name="fricVol" value="0.0"/>
+			<Parameter name="fricPos" value="4.7"/>
+			<Parameter name="fricCF" value="2000.0"/>
+			<Parameter name="fricBW" value="2000.0"/>
+			<Parameter name="r1" value="0.8"/>
+			<Parameter name="r2" value="1.7"/>
+			<Parameter name="r3" value="1.3"/>
+			<Parameter name="r4" value="0.99"/>
+			<Parameter name="r5" value="0.1"/>
+			<Parameter name="r6" value="1.07"/>
+			<Parameter name="r7" value="0.73"/>
+			<Parameter name="r8" value="1.49"/>
+			<Parameter name="velum" value="0.1"/>
+			<Symbol name="duration" value="62.8"/>
+			<Symbol name="transition" value="30.0"/>
+			<Symbol name="qssa" value="31.4"/>
+			<Symbol name="qssb" value="31.4"/>
+			<Category name="phone"/>
+			<Category name="contoid"/>
+			<Category name="stopped"/>
+			<Category name="lhack"/>
+		</Phone>
+
+		<Phone name="k'">
+			<Parameter name="microInt" value="-10.0"/>
+			<Parameter name="glotVol" value="0.0"/>
+			<Parameter name="aspVol" value="0.0"/>
+			<Parameter name="fricVol" value="0.0"/>
+			<Parameter name="fricPos" value="4.7"/>
+			<Parameter name="fricCF" value="2000.0"/>
+			<Parameter name="fricBW" value="2000.0"/>
+			<Parameter name="r1" value="0.8"/>
+			<Parameter name="r2" value="1.7"/>
+			<Parameter name="r3" value="1.3"/>
+			<Parameter name="r4" value="0.99"/>
+			<Parameter name="r5" value="0.1"/>
+			<Parameter name="r6" value="1.07"/>
+			<Parameter name="r7" value="0.73"/>
+			<Parameter name="r8" value="1.49"/>
+			<Parameter name="velum" value="0.1"/>
+			<Symbol name="duration" value="82.4"/>
+			<Symbol name="transition" value="30.0"/>
+			<Symbol name="qssa" value="41.7"/>
+			<Symbol name="qssb" value="41.7"/>
+			<Category name="phone"/>
+			<Category name="contoid"/>
+			<Category name="stopped"/>
+			<Category name="lhack"/>
+		</Phone>
+
+		<Phone name="kx">
+			<Parameter name="microInt" value="-10.0"/>
+			<Parameter name="glotVol" value="0.0"/>
+			<Parameter name="aspVol" value="0.0"/>
+			<Parameter name="fricVol" value="0.0"/>
+			<Parameter name="fricPos" value="4.7"/>
+			<Parameter name="fricCF" value="2000.0"/>
+			<Parameter name="fricBW" value="2000.0"/>
+			<Parameter name="r1" value="0.8"/>
+			<Parameter name="r2" value="1.7"/>
+			<Parameter name="r3" value="1.3"/>
+			<Parameter name="r4" value="0.99"/>
+			<Parameter name="r5" value="0.1"/>
+			<Parameter name="r6" value="1.07"/>
+			<Parameter name="r7" value="0.73"/>
+			<Parameter name="r8" value="1.49"/>
+			<Parameter name="velum" value="0.1"/>
+			<Symbol name="duration" value="87.2"/>
+			<Symbol name="transition" value="30.0"/>
+			<Symbol name="qssa" value="43.6"/>
+			<Symbol name="qssb" value="43.6"/>
+			<Category name="phone"/>
+			<Category name="contoid"/>
+			<Category name="stopped"/>
+			<Category name="lhack"/>
+		</Phone>
+
+		<Phone name="kx'">
+			<Parameter name="microInt" value="-10.0"/>
+			<Parameter name="glotVol" value="0.0"/>
+			<Parameter name="aspVol" value="0.0"/>
+			<Parameter name="fricVol" value="0.0"/>
+			<Parameter name="fricPos" value="4.7"/>
+			<Parameter name="fricCF" value="2000.0"/>
+			<Parameter name="fricBW" value="2000.0"/>
+			<Parameter name="r1" value="0.8"/>
+			<Parameter name="r2" value="1.7"/>
+			<Parameter name="r3" value="1.3"/>
+			<Parameter name="r4" value="0.99"/>
+			<Parameter name="r5" value="0.1"/>
+			<Parameter name="r6" value="1.07"/>
+			<Parameter name="r7" value="0.73"/>
+			<Parameter name="r8" value="1.49"/>
+			<Parameter name="velum" value="0.1"/>
+			<Symbol name="duration" value="114.6"/>
+			<Symbol name="transition" value="30.0"/>
+			<Symbol name="qssa" value="57.3"/>
+			<Symbol name="qssb" value="57.3"/>
+			<Category name="phone"/>
+			<Category name="contoid"/>
+			<Category name="stopped"/>
+			<Category name="lhack"/>
+		</Phone>
+
+		<Phone name="l">
+			<Parameter name="microInt" value="0.0"/>
+			<Parameter name="glotVol" value="60.0"/>
+			<Parameter name="aspVol" value="0.0"/>
+			<Parameter name="fricVol" value="0.0"/>
+			<Parameter name="fricPos" value="5.5"/>
+			<Parameter name="fricCF" value="2500.0"/>
+			<Parameter name="fricBW" value="500.0"/>
+			<Parameter name="r1" value="0.8"/>
+			<Parameter name="r2" value="0.89"/>
+			<Parameter name="r3" value="1.1"/>
+			<Parameter name="r4" value="0.97"/>
+			<Parameter name="r5" value="0.89"/>
+			<Parameter name="r6" value="0.34"/>
+			<Parameter name="r7" value="0.29"/>
+			<Parameter name="r8" value="1.12"/>
+			<Parameter name="velum" value="0.1"/>
+			<Symbol name="duration" value="72.0"/>
+			<Symbol name="transition" value="22.6"/>
+			<Symbol name="qssa" value="36.0"/>
+			<Symbol name="qssb" value="36.0"/>
+			<Category name="phone"/>
+			<Category name="glide"/>
+			<Category name="contoid"/>
+			<Category name="voiced"/>
+			<Category name="checked"/>
+		</Phone>
+
+		<Phone name="l'">
+			<Parameter name="microInt" value="0.0"/>
+			<Parameter name="glotVol" value="60.0"/>
+			<Parameter name="aspVol" value="0.0"/>
+			<Parameter name="fricVol" value="0.0"/>
+			<Parameter name="fricPos" value="5.5"/>
+			<Parameter name="fricCF" value="2500.0"/>
+			<Parameter name="fricBW" value="500.0"/>
+			<Parameter name="r1" value="0.8"/>
+			<Parameter name="r2" value="0.89"/>
+			<Parameter name="r3" value="1.1"/>
+			<Parameter name="r4" value="0.97"/>
+			<Parameter name="r5" value="0.89"/>
+			<Parameter name="r6" value="0.34"/>
+			<Parameter name="r7" value="0.29"/>
+			<Parameter name="r8" value="1.12"/>
+			<Parameter name="velum" value="0.1"/>
+			<Symbol name="duration" value="84.0"/>
+			<Symbol name="transition" value="22.6"/>
+			<Symbol name="qssa" value="42.0"/>
+			<Symbol name="qssb" value="42.0"/>
+			<Category name="phone"/>
+			<Category name="contoid"/>
+			<Category name="glide"/>
+			<Category name="voiced"/>
+			<Category name="checked"/>
+		</Phone>
+
+		<Phone name="ll">
+			<Parameter name="microInt" value="0.0"/>
+			<Parameter name="glotVol" value="60.0"/>
+			<Parameter name="aspVol" value="0.0"/>
+			<Parameter name="fricVol" value="0.0"/>
+			<Parameter name="fricPos" value="5.5"/>
+			<Parameter name="fricCF" value="2500.0"/>
+			<Parameter name="fricBW" value="500.0"/>
+			<Parameter name="r1" value="0.8"/>
+			<Parameter name="r2" value="0.63"/>
+			<Parameter name="r3" value="0.47"/>
+			<Parameter name="r4" value="0.65"/>
+			<Parameter name="r5" value="1.54"/>
+			<Parameter name="r6" value="0.45"/>
+			<Parameter name="r7" value="0.26"/>
+			<Parameter name="r8" value="1.05"/>
+			<Parameter name="velum" value="0.1"/>
+			<Symbol name="duration" value="72.0"/>
+			<Symbol name="transition" value="22.6"/>
+			<Symbol name="qssa" value="36.0"/>
+			<Symbol name="qssb" value="36.0"/>
+			<Category name="phone"/>
+			<Category name="contoid"/>
+			<Category name="glide"/>
+			<Category name="voiced"/>
+			<Category name="checked"/>
+		</Phone>
+
+		<Phone name="ll'">
+			<Parameter name="microInt" value="0.0"/>
+			<Parameter name="glotVol" value="60.0"/>
+			<Parameter name="aspVol" value="0.0"/>
+			<Parameter name="fricVol" value="0.0"/>
+			<Parameter name="fricPos" value="5.5"/>
+			<Parameter name="fricCF" value="2500.0"/>
+			<Parameter name="fricBW" value="500.0"/>
+			<Parameter name="r1" value="0.8"/>
+			<Parameter name="r2" value="0.63"/>
+			<Parameter name="r3" value="0.47"/>
+			<Parameter name="r4" value="0.65"/>
+			<Parameter name="r5" value="1.54"/>
+			<Parameter name="r6" value="0.45"/>
+			<Parameter name="r7" value="0.26"/>
+			<Parameter name="r8" value="1.05"/>
+			<Parameter name="velum" value="0.1"/>
+			<Symbol name="duration" value="84.0"/>
+			<Symbol name="transition" value="22.6"/>
+			<Symbol name="qssa" value="42.0"/>
+			<Symbol name="qssb" value="42.0"/>
+			<Category name="phone"/>
+			<Category name="contoid"/>
+			<Category name="glide"/>
+			<Category name="voiced"/>
+			<Category name="checked"/>
+		</Phone>
+
+		<Phone name="ls">
+			<Parameter name="microInt" value="0.0"/>
+			<Parameter name="glotVol" value="60.0"/>
+			<Parameter name="aspVol" value="0.0"/>
+			<Parameter name="fricVol" value="0.0"/>
+			<Parameter name="fricPos" value="5.5"/>
+			<Parameter name="fricCF" value="2500.0"/>
+			<Parameter name="fricBW" value="500.0"/>
+			<Parameter name="r1" value="0.8"/>
+			<Parameter name="r2" value="0.63"/>
+			<Parameter name="r3" value="0.47"/>
+			<Parameter name="r4" value="0.65"/>
+			<Parameter name="r5" value="1.54"/>
+			<Parameter name="r6" value="0.45"/>
+			<Parameter name="r7" value="0.26"/>
+			<Parameter name="r8" value="1.05"/>
+			<Parameter name="velum" value="0.1"/>
+			<Symbol name="duration" value="100.0"/>
+			<Symbol name="transition" value="22.6"/>
+			<Symbol name="qssa" value="50.0"/>
+			<Symbol name="qssb" value="50.0"/>
+			<Category name="phone"/>
+			<Category name="contoid"/>
+			<Category name="glide"/>
+			<Category name="voiced"/>
+			<Category name="checked"/>
+		</Phone>
+
+		<Phone name="ls'">
+			<Parameter name="microInt" value="0.0"/>
+			<Parameter name="glotVol" value="60.0"/>
+			<Parameter name="aspVol" value="0.0"/>
+			<Parameter name="fricVol" value="0.0"/>
+			<Parameter name="fricPos" value="5.5"/>
+			<Parameter name="fricCF" value="2500.0"/>
+			<Parameter name="fricBW" value="500.0"/>
+			<Parameter name="r1" value="0.8"/>
+			<Parameter name="r2" value="0.63"/>
+			<Parameter name="r3" value="0.47"/>
+			<Parameter name="r4" value="0.65"/>
+			<Parameter name="r5" value="1.54"/>
+			<Parameter name="r6" value="0.45"/>
+			<Parameter name="r7" value="0.26"/>
+			<Parameter name="r8" value="1.05"/>
+			<Parameter name="velum" value="0.1"/>
+			<Symbol name="duration" value="150.0"/>
+			<Symbol name="transition" value="22.6"/>
+			<Symbol name="qssa" value="75.0"/>
+			<Symbol name="qssb" value="75.0"/>
+			<Category name="phone"/>
+			<Category name="contoid"/>
+			<Category name="glide"/>
+			<Category name="voiced"/>
+			<Category name="checked"/>
+		</Phone>
+
+		<Phone name="m">
+			<Parameter name="microInt" value="0.0"/>
+			<Parameter name="glotVol" value="60.0"/>
+			<Parameter name="aspVol" value="0.0"/>
+			<Parameter name="fricVol" value="0.0"/>
+			<Parameter name="fricPos" value="5.5"/>
+			<Parameter name="fricCF" value="2500.0"/>
+			<Parameter name="fricBW" value="500.0"/>
+			<Parameter name="r1" value="0.8"/>
+			<Parameter name="r2" value="0.89"/>
+			<Parameter name="r3" value="0.76"/>
+			<Parameter name="r4" value="1.28"/>
+			<Parameter name="r5" value="1.8"/>
+			<Parameter name="r6" value="0.99"/>
+			<Parameter name="r7" value="0.84"/>
+			<Parameter name="r8" value="0.1"/>
+			<Parameter name="velum" value="0.5"/>
+			<Symbol name="duration" value="49.8"/>
+			<Symbol name="transition" value="16.0"/>
+			<Symbol name="qssa" value="24.8"/>
+			<Symbol name="qssb" value="24.8"/>
+			<Category name="phone"/>
+			<Category name="contoid"/>
+			<Category name="nasal"/>
+			<Category name="checked"/>
+			<Category name="voiced"/>
+			<Category name="lhack"/>
+		</Phone>
+
+		<Phone name="m'">
+			<Parameter name="microInt" value="0.0"/>
+			<Parameter name="glotVol" value="60.0"/>
+			<Parameter name="aspVol" value="0.0"/>
+			<Parameter name="fricVol" value="0.0"/>
+			<Parameter name="fricPos" value="5.5"/>
+			<Parameter name="fricCF" value="2500.0"/>
+			<Parameter name="fricBW" value="500.0"/>
+			<Parameter name="r1" value="0.8"/>
+			<Parameter name="r2" value="0.89"/>
+			<Parameter name="r3" value="0.76"/>
+			<Parameter name="r4" value="1.28"/>
+			<Parameter name="r5" value="1.8"/>
+			<Parameter name="r6" value="0.99"/>
+			<Parameter name="r7" value="0.84"/>
+			<Parameter name="r8" value="0.1"/>
+			<Parameter name="velum" value="0.5"/>
+			<Symbol name="duration" value="94.4"/>
+			<Symbol name="transition" value="16.0"/>
+			<Symbol name="qssa" value="47.2"/>
+			<Symbol name="qssb" value="47.2"/>
+			<Category name="phone"/>
+			<Category name="contoid"/>
+			<Category name="nasal"/>
+			<Category name="checked"/>
+			<Category name="voiced"/>
+			<Category name="lhack"/>
+		</Phone>
+
+		<Phone name="n">
+			<Parameter name="microInt" value="0.0"/>
+			<Parameter name="glotVol" value="60.0"/>
+			<Parameter name="aspVol" value="0.0"/>
+			<Parameter name="fricVol" value="0.0"/>
+			<Parameter name="fricPos" value="5.5"/>
+			<Parameter name="fricCF" value="2500.0"/>
+			<Parameter name="fricBW" value="500.0"/>
+			<Parameter name="r1" value="0.8"/>
+			<Parameter name="r2" value="1.31"/>
+			<Parameter name="r3" value="1.49"/>
+			<Parameter name="r4" value="1.25"/>
+			<Parameter name="r5" value="1.0"/>
+			<Parameter name="r6" value="0.05"/>
+			<Parameter name="r7" value="1.44"/>
+			<Parameter name="r8" value="1.31"/>
+			<Parameter name="velum" value="0.5"/>
+			<Symbol name="duration" value="50.6"/>
+			<Symbol name="transition" value="25.7"/>
+			<Symbol name="qssa" value="25.3"/>
+			<Symbol name="qssb" value="25.3"/>
+			<Category name="phone"/>
+			<Category name="contoid"/>
+			<Category name="nasal"/>
+			<Category name="checked"/>
+			<Category name="voiced"/>
+			<Category name="lhack"/>
+		</Phone>
+
+		<Phone name="n'">
+			<Parameter name="microInt" value="0.0"/>
+			<Parameter name="glotVol" value="60.0"/>
+			<Parameter name="aspVol" value="0.0"/>
+			<Parameter name="fricVol" value="0.0"/>
+			<Parameter name="fricPos" value="5.5"/>
+			<Parameter name="fricCF" value="2500.0"/>
+			<Parameter name="fricBW" value="500.0"/>
+			<Parameter name="r1" value="0.8"/>
+			<Parameter name="r2" value="1.31"/>
+			<Parameter name="r3" value="1.49"/>
+			<Parameter name="r4" value="1.25"/>
+			<Parameter name="r5" value="1.0"/>
+			<Parameter name="r6" value="0.05"/>
+			<Parameter name="r7" value="1.44"/>
+			<Parameter name="r8" value="1.31"/>
+			<Parameter name="velum" value="0.5"/>
+			<Symbol name="duration" value="66.0"/>
+			<Symbol name="transition" value="25.7"/>
+			<Symbol name="qssa" value="33.0"/>
+			<Symbol name="qssb" value="33.0"/>
+			<Category name="phone"/>
+			<Category name="contoid"/>
+			<Category name="nasal"/>
+			<Category name="checked"/>
+			<Category name="voiced"/>
+			<Category name="lhack"/>
+		</Phone>
+
+		<Phone name="ng">
+			<Parameter name="microInt" value="0.0"/>
+			<Parameter name="glotVol" value="60.0"/>
+			<Parameter name="aspVol" value="0.0"/>
+			<Parameter name="fricVol" value="0.0"/>
+			<Parameter name="fricPos" value="5.5"/>
+			<Parameter name="fricCF" value="2500.0"/>
+			<Parameter name="fricBW" value="500.0"/>
+			<Parameter name="r1" value="0.8"/>
+			<Parameter name="r2" value="1.7"/>
+			<Parameter name="r3" value="1.3"/>
+			<Parameter name="r4" value="0.99"/>
+			<Parameter name="r5" value="0.1"/>
+			<Parameter name="r6" value="1.07"/>
+			<Parameter name="r7" value="0.73"/>
+			<Parameter name="r8" value="1.49"/>
+			<Parameter name="velum" value="0.5"/>
+			<Symbol name="duration" value="50.0"/>
+			<Symbol name="transition" value="28.5"/>
+			<Symbol name="qssa" value="25.0"/>
+			<Symbol name="qssb" value="25.0"/>
+			<Category name="phone"/>
+			<Category name="contoid"/>
+			<Category name="nasal"/>
+			<Category name="voiced"/>
+		</Phone>
+
+		<Phone name="ng'">
+			<Parameter name="microInt" value="0.0"/>
+			<Parameter name="glotVol" value="60.0"/>
+			<Parameter name="aspVol" value="0.0"/>
+			<Parameter name="fricVol" value="0.0"/>
+			<Parameter name="fricPos" value="5.5"/>
+			<Parameter name="fricCF" value="2500.0"/>
+			<Parameter name="fricBW" value="500.0"/>
+			<Parameter name="r1" value="0.8"/>
+			<Parameter name="r2" value="1.7"/>
+			<Parameter name="r3" value="1.3"/>
+			<Parameter name="r4" value="0.99"/>
+			<Parameter name="r5" value="0.1"/>
+			<Parameter name="r6" value="1.07"/>
+			<Parameter name="r7" value="0.73"/>
+			<Parameter name="r8" value="1.49"/>
+			<Parameter name="velum" value="0.5"/>
+			<Symbol name="duration" value="68.0"/>
+			<Symbol name="transition" value="28.5"/>
+			<Symbol name="qssa" value="34.0"/>
+			<Symbol name="qssb" value="34.0"/>
+			<Category name="phone"/>
+			<Category name="contoid"/>
+			<Category name="nasal"/>
+			<Category name="voiced"/>
+		</Phone>
+
+		<Phone name="o">
+			<Parameter name="microInt" value="0.0"/>
+			<Parameter name="glotVol" value="60.0"/>
+			<Parameter name="aspVol" value="0.0"/>
+			<Parameter name="fricVol" value="0.0"/>
+			<Parameter name="fricPos" value="5.5"/>
+			<Parameter name="fricCF" value="2500.0"/>
+			<Parameter name="fricBW" value="500.0"/>
+			<Parameter name="r1" value="0.8"/>
+			<Parameter name="r2" value="1.0"/>
+			<Parameter name="r3" value="0.925"/>
+			<Parameter name="r4" value="0.6"/>
+			<Parameter name="r5" value="1.27"/>
+			<Parameter name="r6" value="1.83"/>
+			<Parameter name="r7" value="1.97"/>
+			<Parameter name="r8" value="1.12"/>
+			<Parameter name="velum" value="0.1"/>
+			<Symbol name="duration" value="70.4"/>
+			<Symbol name="transition" value="27.8"/>
+			<Symbol name="qssa" value="22.6"/>
+			<Symbol name="qssb" value="22.6"/>
+			<Category name="phone"/>
+			<Category name="vocoid"/>
+			<Category name="voiced"/>
+		</Phone>
+
+		<Phone name="o'">
+			<Parameter name="microInt" value="0.0"/>
+			<Parameter name="glotVol" value="60.0"/>
+			<Parameter name="aspVol" value="0.0"/>
+			<Parameter name="fricVol" value="0.0"/>
+			<Parameter name="fricPos" value="5.5"/>
+			<Parameter name="fricCF" value="2500.0"/>
+			<Parameter name="fricBW" value="500.0"/>
+			<Parameter name="r1" value="0.8"/>
+			<Parameter name="r2" value="1.0"/>
+			<Parameter name="r3" value="0.93"/>
+			<Parameter name="r4" value="0.6"/>
+			<Parameter name="r5" value="1.27"/>
+			<Parameter name="r6" value="1.83"/>
+			<Parameter name="r7" value="1.97"/>
+			<Parameter name="r8" value="1.12"/>
+			<Parameter name="velum" value="0.1"/>
+			<Symbol name="duration" value="103.8"/>
+			<Symbol name="transition" value="27.8"/>
+			<Symbol name="qssa" value="39.3"/>
+			<Symbol name="qssb" value="39.3"/>
+			<Category name="phone"/>
+			<Category name="vocoid"/>
+			<Category name="voiced"/>
+		</Phone>
+
+		<Phone name="oh" comment="We have fiddled the duration by plus 20 msec because the very short qss was causing impulse problems in paramater construction. ">
+			<Parameter name="microInt" value="0.0"/>
+			<Parameter name="glotVol" value="0.0"/>
+			<Parameter name="aspVol" value="0.0"/>
+			<Parameter name="fricVol" value="0.0"/>
+			<Parameter name="fricPos" value="5.5"/>
+			<Parameter name="fricCF" value="2500.0"/>
+			<Parameter name="fricBW" value="500.0"/>
+			<Parameter name="r1" value="0.8"/>
+			<Parameter name="r2" value="0.885"/>
+			<Parameter name="r3" value="0.99"/>
+			<Parameter name="r4" value="0.81"/>
+			<Parameter name="r5" value="0.755"/>
+			<Parameter name="r6" value="1.045"/>
+			<Parameter name="r7" value="1.225"/>
+			<Parameter name="r8" value="1.12"/>
+			<Parameter name="velum" value="0.1"/>
+			<Symbol name="duration" value="37.8"/>
+			<Symbol name="transition" value="27.8"/>
+			<Symbol name="qssa" value="5.0"/>
+			<Symbol name="qssb" value="5.0"/>
+			<Category name="phone"/>
+			<Category name="vocoid"/>
+			<Category name="voiced"/>
+		</Phone>
+
+		<Phone name="oh'" comment="">
+			<Parameter name="microInt" value="0.0"/>
+			<Parameter name="glotVol" value="0.0"/>
+			<Parameter name="aspVol" value="0.0"/>
+			<Parameter name="fricVol" value="0.0"/>
+			<Parameter name="fricPos" value="5.5"/>
+			<Parameter name="fricCF" value="2500.0"/>
+			<Parameter name="fricBW" value="500.0"/>
+			<Parameter name="r1" value="0.8"/>
+			<Parameter name="r2" value="0.885"/>
+			<Parameter name="r3" value="0.99"/>
+			<Parameter name="r4" value="0.81"/>
+			<Parameter name="r5" value="0.755"/>
+			<Parameter name="r6" value="1.045"/>
+			<Parameter name="r7" value="1.225"/>
+			<Parameter name="r8" value="1.12"/>
+			<Parameter name="velum" value="0.1"/>
+			<Symbol name="duration" value="41.8"/>
+			<Symbol name="transition" value="27.8"/>
+			<Symbol name="qssa" value="7.0"/>
+			<Symbol name="qssb" value="7.0"/>
+			<Category name="phone"/>
+			<Category name="vocoid"/>
+			<Category name="voiced"/>
+		</Phone>
+
+		<Phone name="on">
+			<Parameter name="microInt" value="0.0"/>
+			<Parameter name="glotVol" value="60.0"/>
+			<Parameter name="aspVol" value="0.0"/>
+			<Parameter name="fricVol" value="0.0"/>
+			<Parameter name="fricPos" value="5.5"/>
+			<Parameter name="fricCF" value="2500.0"/>
+			<Parameter name="fricBW" value="500.0"/>
+			<Parameter name="r1" value="0.8"/>
+			<Parameter name="r2" value="1.0"/>
+			<Parameter name="r3" value="0.925"/>
+			<Parameter name="r4" value="0.6"/>
+			<Parameter name="r5" value="1.265"/>
+			<Parameter name="r6" value="1.83"/>
+			<Parameter name="r7" value="1.965"/>
+			<Parameter name="r8" value="1.12"/>
+			<Parameter name="velum" value="1.5"/>
+			<Symbol name="duration" value="70.4"/>
+			<Symbol name="transition" value="27.8"/>
+			<Symbol name="qssa" value="22.6"/>
+			<Symbol name="qssb" value="22.6"/>
+			<Category name="phone"/>
+			<Category name="vocoid"/>
+			<Category name="voiced"/>
+		</Phone>
+
+		<Phone name="on'">
+			<Parameter name="microInt" value="0.0"/>
+			<Parameter name="glotVol" value="60.0"/>
+			<Parameter name="aspVol" value="0.0"/>
+			<Parameter name="fricVol" value="0.0"/>
+			<Parameter name="fricPos" value="7.0"/>
+			<Parameter name="fricCF" value="2000.0"/>
+			<Parameter name="fricBW" value="1000.0"/>
+			<Parameter name="r1" value="0.8"/>
+			<Parameter name="r2" value="1.0"/>
+			<Parameter name="r3" value="0.925"/>
+			<Parameter name="r4" value="0.6"/>
+			<Parameter name="r5" value="1.265"/>
+			<Parameter name="r6" value="1.83"/>
+			<Parameter name="r7" value="1.965"/>
+			<Parameter name="r8" value="1.12"/>
+			<Parameter name="velum" value="1.5"/>
+			<Symbol name="duration" value="103.8"/>
+			<Symbol name="transition" value="27.8"/>
+			<Symbol name="qssa" value="39.3"/>
+			<Symbol name="qssb" value="39.3"/>
+			<Category name="phone"/>
+			<Category name="vocoid"/>
+			<Category name="voiced"/>
+		</Phone>
+
+		<Phone name="ov" comment="We have fiddled the duration by plus 20 msec because the very short qss was causing impulse problems in paramater construction. ">
+			<Parameter name="microInt" value="0.0"/>
+			<Parameter name="glotVol" value="60.0"/>
+			<Parameter name="aspVol" value="0.0"/>
+			<Parameter name="fricVol" value="0.0"/>
+			<Parameter name="fricPos" value="5.5"/>
+			<Parameter name="fricCF" value="2500.0"/>
+			<Parameter name="fricBW" value="500.0"/>
+			<Parameter name="r1" value="0.8"/>
+			<Parameter name="r2" value="0.885"/>
+			<Parameter name="r3" value="0.99"/>
+			<Parameter name="r4" value="0.81"/>
+			<Parameter name="r5" value="0.755"/>
+			<Parameter name="r6" value="1.045"/>
+			<Parameter name="r7" value="1.225"/>
+			<Parameter name="r8" value="1.12"/>
+			<Parameter name="velum" value="0.1"/>
+			<Symbol name="duration" value="37.8"/>
+			<Symbol name="transition" value="27.8"/>
+			<Symbol name="qssa" value="5.0"/>
+			<Symbol name="qssb" value="5.0"/>
+			<Category name="phone"/>
+			<Category name="vocoid"/>
+			<Category name="voiced"/>
+		</Phone>
+
+		<Phone name="ov'" comment="">
+			<Parameter name="microInt" value="0.0"/>
+			<Parameter name="glotVol" value="60.0"/>
+			<Parameter name="aspVol" value="0.0"/>
+			<Parameter name="fricVol" value="0.0"/>
+			<Parameter name="fricPos" value="5.5"/>
+			<Parameter name="fricCF" value="2500.0"/>
+			<Parameter name="fricBW" value="500.0"/>
+			<Parameter name="r1" value="0.8"/>
+			<Parameter name="r2" value="0.885"/>
+			<Parameter name="r3" value="0.99"/>
+			<Parameter name="r4" value="0.81"/>
+			<Parameter name="r5" value="0.755"/>
+			<Parameter name="r6" value="1.045"/>
+			<Parameter name="r7" value="1.225"/>
+			<Parameter name="r8" value="1.12"/>
+			<Parameter name="velum" value="0.1"/>
+			<Symbol name="duration" value="41.8"/>
+			<Symbol name="transition" value="27.8"/>
+			<Symbol name="qssa" value="7.0"/>
+			<Symbol name="qssb" value="7.0"/>
+			<Category name="phone"/>
+			<Category name="vocoid"/>
+			<Category name="voiced"/>
+		</Phone>
+
+		<Phone name="p">
+			<Parameter name="microInt" value="-10.0"/>
+			<Parameter name="glotVol" value="0.0"/>
+			<Parameter name="aspVol" value="0.0"/>
+			<Parameter name="fricVol" value="0.0"/>
+			<Parameter name="fricPos" value="7.0"/>
+			<Parameter name="fricCF" value="2000.0"/>
+			<Parameter name="fricBW" value="700.0"/>
+			<Parameter name="r1" value="0.8"/>
+			<Parameter name="r2" value="0.89"/>
+			<Parameter name="r3" value="0.76"/>
+			<Parameter name="r4" value="1.28"/>
+			<Parameter name="r5" value="1.8"/>
+			<Parameter name="r6" value="0.99"/>
+			<Parameter name="r7" value="0.84"/>
+			<Parameter name="r8" value="0.1"/>
+			<Parameter name="velum" value="0.1"/>
+			<Symbol name="duration" value="76.0"/>
+			<Symbol name="transition" value="18.3"/>
+			<Symbol name="qssa" value="38.0"/>
+			<Symbol name="qssb" value="38.0"/>
+			<Category name="phone"/>
+			<Category name="contoid"/>
+			<Category name="stopped"/>
+			<Category name="checked"/>
+			<Category name="fortis"/>
+			<Category name="lhack"/>
+		</Phone>
+
+		<Phone name="p'">
+			<Parameter name="microInt" value="-10.0"/>
+			<Parameter name="glotVol" value="0.0"/>
+			<Parameter name="aspVol" value="0.0"/>
+			<Parameter name="fricVol" value="0.0"/>
+			<Parameter name="fricPos" value="7.0"/>
+			<Parameter name="fricCF" value="2000.0"/>
+			<Parameter name="fricBW" value="700.0"/>
+			<Parameter name="r1" value="0.8"/>
+			<Parameter name="r2" value="0.89"/>
+			<Parameter name="r3" value="0.76"/>
+			<Parameter name="r4" value="1.28"/>
+			<Parameter name="r5" value="1.8"/>
+			<Parameter name="r6" value="0.99"/>
+			<Parameter name="r7" value="0.84"/>
+			<Parameter name="r8" value="0.1"/>
+			<Parameter name="velum" value="0.1"/>
+			<Symbol name="duration" value="81.6"/>
+			<Symbol name="transition" value="18.3"/>
+			<Symbol name="qssa" value="40.8"/>
+			<Symbol name="qssb" value="40.8"/>
+			<Category name="phone"/>
+			<Category name="contoid"/>
+			<Category name="stopped"/>
+			<Category name="checked"/>
+			<Category name="fortis"/>
+			<Category name="lhack"/>
+		</Phone>
+
+		<Phone name="ph">
+			<Parameter name="microInt" value="-1.0"/>
+			<Parameter name="glotVol" value="0.0"/>
+			<Parameter name="aspVol" value="0.0"/>
+			<Parameter name="fricVol" value="24.0"/>
+			<Parameter name="fricPos" value="7.0"/>
+			<Parameter name="fricCF" value="864.0"/>
+			<Parameter name="fricBW" value="3587.0"/>
+			<Parameter name="r1" value="0.8"/>
+			<Parameter name="r2" value="0.89"/>
+			<Parameter name="r3" value="0.99"/>
+			<Parameter name="r4" value="0.81"/>
+			<Parameter name="r5" value="0.6"/>
+			<Parameter name="r6" value="0.52"/>
+			<Parameter name="r7" value="0.71"/>
+			<Parameter name="r8" value="0.24"/>
+			<Parameter name="velum" value="0.1"/>
+			<Symbol name="duration" value="100.0"/>
+			<Symbol name="transition" value="18.3"/>
+			<Symbol name="qssa" value="50.0"/>
+			<Symbol name="qssb" value="50.0"/>
+			<Category name="phone"/>
+			<Category name="contoid"/>
+			<Category name="fricative"/>
+			<Category name="checked"/>
+			<Category name="lhack"/>
+		</Phone>
+
+		<Phone name="ph'">
+			<Parameter name="microInt" value="-1.0"/>
+			<Parameter name="glotVol" value="0.0"/>
+			<Parameter name="aspVol" value="0.0"/>
+			<Parameter name="fricVol" value="24.0"/>
+			<Parameter name="fricPos" value="7.0"/>
+			<Parameter name="fricCF" value="864.0"/>
+			<Parameter name="fricBW" value="3587.0"/>
+			<Parameter name="r1" value="0.8"/>
+			<Parameter name="r2" value="0.89"/>
+			<Parameter name="r3" value="0.99"/>
+			<Parameter name="r4" value="0.81"/>
+			<Parameter name="r5" value="0.6"/>
+			<Parameter name="r6" value="0.52"/>
+			<Parameter name="r7" value="0.71"/>
+			<Parameter name="r8" value="0.24"/>
+			<Parameter name="velum" value="0.1"/>
+			<Symbol name="duration" value="126.0"/>
+			<Symbol name="transition" value="18.3"/>
+			<Symbol name="qssa" value="63.0"/>
+			<Symbol name="qssb" value="63.0"/>
+			<Category name="phone"/>
+			<Category name="contoid"/>
+			<Category name="fricative"/>
+			<Category name="checked"/>
+			<Category name="lhack"/>
+		</Phone>
+
+		<Phone name="px">
+			<Parameter name="microInt" value="-10.0"/>
+			<Parameter name="glotVol" value="0.0"/>
+			<Parameter name="aspVol" value="0.0"/>
+			<Parameter name="fricVol" value="0.0"/>
+			<Parameter name="fricPos" value="7.0"/>
+			<Parameter name="fricCF" value="2000.0"/>
+			<Parameter name="fricBW" value="700.0"/>
+			<Parameter name="r1" value="0.8"/>
+			<Parameter name="r2" value="0.89"/>
+			<Parameter name="r3" value="0.76"/>
+			<Parameter name="r4" value="1.28"/>
+			<Parameter name="r5" value="1.8"/>
+			<Parameter name="r6" value="0.99"/>
+			<Parameter name="r7" value="0.84"/>
+			<Parameter name="r8" value="0.1"/>
+			<Parameter name="velum" value="0.1"/>
+			<Symbol name="duration" value="89.4"/>
+			<Symbol name="transition" value="18.3"/>
+			<Symbol name="qssa" value="44.7"/>
+			<Symbol name="qssb" value="44.7"/>
+			<Category name="phone"/>
+			<Category name="contoid"/>
+			<Category name="stopped"/>
+			<Category name="checked"/>
+			<Category name="fortis"/>
+			<Category name="lhack"/>
+		</Phone>
+
+		<Phone name="px'">
+			<Parameter name="microInt" value="-10.0"/>
+			<Parameter name="glotVol" value="0.0"/>
+			<Parameter name="aspVol" value="0.0"/>
+			<Parameter name="fricVol" value="0.0"/>
+			<Parameter name="fricPos" value="7.0"/>
+			<Parameter name="fricCF" value="2000.0"/>
+			<Parameter name="fricBW" value="700.0"/>
+			<Parameter name="r1" value="0.8"/>
+			<Parameter name="r2" value="0.89"/>
+			<Parameter name="r3" value="0.76"/>
+			<Parameter name="r4" value="1.28"/>
+			<Parameter name="r5" value="1.8"/>
+			<Parameter name="r6" value="0.99"/>
+			<Parameter name="r7" value="0.84"/>
+			<Parameter name="r8" value="0.1"/>
+			<Parameter name="velum" value="0.1"/>
+			<Symbol name="duration" value="116.2"/>
+			<Symbol name="transition" value="18.3"/>
+			<Symbol name="qssa" value="58.1"/>
+			<Symbol name="qssb" value="58.1"/>
+			<Category name="phone"/>
+			<Category name="contoid"/>
+			<Category name="stopped"/>
+			<Category name="checked"/>
+			<Category name="fortis"/>
+			<Category name="lhack"/>
+		</Phone>
+
+		<Phone name="q" comment="This is an 'at rest' symbol that is used to start and terminate utterances without introducing ridiculous transitions etc!">
+			<Parameter name="microInt" value="0.0"/>
+			<Parameter name="glotVol" value="0.0"/>
+			<Parameter name="aspVol" value="0.0"/>
+			<Parameter name="fricVol" value="0.0"/>
+			<Parameter name="fricPos" value="5.5"/>
+			<Parameter name="fricCF" value="2500.0"/>
+			<Parameter name="fricBW" value="500.0"/>
+			<Parameter name="r1" value="0.8"/>
+			<Parameter name="r2" value="0.89"/>
+			<Parameter name="r3" value="0.99"/>
+			<Parameter name="r4" value="0.81"/>
+			<Parameter name="r5" value="0.76"/>
+			<Parameter name="r6" value="1.05"/>
+			<Parameter name="r7" value="1.23"/>
+			<Parameter name="r8" value="0.01"/>
+			<Parameter name="velum" value="0.1"/>
+			<Symbol name="duration" value="18.0"/>
+			<Symbol name="transition" value="6.0"/>
+			<Symbol name="qssa" value="6.0"/>
+			<Symbol name="qssb" value="6.0"/>
+			<Category name="silence"/>
+			<Category name="phone"/>
+		</Phone>
+
+		<Phone name="q'" comment="This is an 'at rest' symbol that is used to start and terminate utterances without introducing ridiculous transitions etc!">
+			<Parameter name="microInt" value="0.0"/>
+			<Parameter name="glotVol" value="0.0"/>
+			<Parameter name="aspVol" value="0.0"/>
+			<Parameter name="fricVol" value="0.0"/>
+			<Parameter name="fricPos" value="5.5"/>
+			<Parameter name="fricCF" value="2500.0"/>
+			<Parameter name="fricBW" value="500.0"/>
+			<Parameter name="r1" value="0.8"/>
+			<Parameter name="r2" value="0.89"/>
+			<Parameter name="r3" value="0.99"/>
+			<Parameter name="r4" value="0.81"/>
+			<Parameter name="r5" value="0.76"/>
+			<Parameter name="r6" value="1.05"/>
+			<Parameter name="r7" value="1.23"/>
+			<Parameter name="r8" value="0.01"/>
+			<Parameter name="velum" value="0.1"/>
+			<Symbol name="duration" value="21.0"/>
+			<Symbol name="transition" value="7.0"/>
+			<Symbol name="qssa" value="7.0"/>
+			<Symbol name="qssb" value="7.0"/>
+			<Category name="silence"/>
+			<Category name="phone"/>
+		</Phone>
+
+		<Phone name="qc">
+			<Parameter name="microInt" value="-2.0"/>
+			<Parameter name="glotVol" value="0.0"/>
+			<Parameter name="aspVol" value="0.0"/>
+			<Parameter name="fricVol" value="0.0"/>
+			<Parameter name="fricPos" value="5.6"/>
+			<Parameter name="fricCF" value="2500.0"/>
+			<Parameter name="fricBW" value="2600.0"/>
+			<Parameter name="r1" value="0.8"/>
+			<Parameter name="r2" value="1.36"/>
+			<Parameter name="r3" value="1.74"/>
+			<Parameter name="r4" value="1.87"/>
+			<Parameter name="r5" value="0.94"/>
+			<Parameter name="r6" value="0.1"/>
+			<Parameter name="r7" value="0.79"/>
+			<Parameter name="r8" value="0.79"/>
+			<Parameter name="velum" value="0.1"/>
+			<Symbol name="duration" value="6.0"/>
+			<Symbol name="transition" value="2.0"/>
+			<Symbol name="qssa" value="2.0"/>
+			<Symbol name="qssb" value="2.0"/>
+			<Category name="phone"/>
+			<Category name="silence"/>
+		</Phone>
+
+		<Phone name="qc'">
+			<Parameter name="microInt" value="-2.0"/>
+			<Parameter name="glotVol" value="0.0"/>
+			<Parameter name="aspVol" value="0.0"/>
+			<Parameter name="fricVol" value="0.0"/>
+			<Parameter name="fricPos" value="5.6"/>
+			<Parameter name="fricCF" value="2500.0"/>
+			<Parameter name="fricBW" value="2600.0"/>
+			<Parameter name="r1" value="0.8"/>
+			<Parameter name="r2" value="1.36"/>
+			<Parameter name="r3" value="1.74"/>
+			<Parameter name="r4" value="1.87"/>
+			<Parameter name="r5" value="0.94"/>
+			<Parameter name="r6" value="0.1"/>
+			<Parameter name="r7" value="0.79"/>
+			<Parameter name="r8" value="0.79"/>
+			<Parameter name="velum" value="0.1"/>
+			<Symbol name="duration" value="6.0"/>
+			<Symbol name="transition" value="2.0"/>
+			<Symbol name="qssa" value="2.0"/>
+			<Symbol name="qssb" value="2.0"/>
+			<Category name="phone"/>
+			<Category name="silence"/>
+		</Phone>
+
+		<Phone name="qk">
+			<Parameter name="microInt" value="-10.0"/>
+			<Parameter name="glotVol" value="0.0"/>
+			<Parameter name="aspVol" value="0.0"/>
+			<Parameter name="fricVol" value="0.0"/>
+			<Parameter name="fricPos" value="4.7"/>
+			<Parameter name="fricCF" value="2000.0"/>
+			<Parameter name="fricBW" value="2000.0"/>
+			<Parameter name="r1" value="0.8"/>
+			<Parameter name="r2" value="1.7"/>
+			<Parameter name="r3" value="1.3"/>
+			<Parameter name="r4" value="0.99"/>
+			<Parameter name="r5" value="0.1"/>
+			<Parameter name="r6" value="1.07"/>
+			<Parameter name="r7" value="0.73"/>
+			<Parameter name="r8" value="1.49"/>
+			<Parameter name="velum" value="0.1"/>
+			<Symbol name="duration" value="6.0"/>
+			<Symbol name="transition" value="2.0"/>
+			<Symbol name="qssa" value="2.0"/>
+			<Symbol name="qssb" value="2.0"/>
+			<Category name="phone"/>
+			<Category name="silence"/>
+		</Phone>
+
+		<Phone name="qk'">
+			<Parameter name="microInt" value="-10.0"/>
+			<Parameter name="glotVol" value="0.0"/>
+			<Parameter name="aspVol" value="0.0"/>
+			<Parameter name="fricVol" value="0.0"/>
+			<Parameter name="fricPos" value="4.7"/>
+			<Parameter name="fricCF" value="2000.0"/>
+			<Parameter name="fricBW" value="2000.0"/>
+			<Parameter name="r1" value="0.8"/>
+			<Parameter name="r2" value="1.7"/>
+			<Parameter name="r3" value="1.3"/>
+			<Parameter name="r4" value="0.99"/>
+			<Parameter name="r5" value="0.1"/>
+			<Parameter name="r6" value="1.07"/>
+			<Parameter name="r7" value="0.73"/>
+			<Parameter name="r8" value="1.49"/>
+			<Parameter name="velum" value="0.1"/>
+			<Symbol name="duration" value="6.0"/>
+			<Symbol name="transition" value="2.0"/>
+			<Symbol name="qssa" value="2.0"/>
+			<Symbol name="qssb" value="2.0"/>
+			<Category name="phone"/>
+			<Category name="silence"/>
+		</Phone>
+
+		<Phone name="qp">
+			<Parameter name="microInt" value="-10.0"/>
+			<Parameter name="glotVol" value="0.0"/>
+			<Parameter name="aspVol" value="0.0"/>
+			<Parameter name="fricVol" value="0.0"/>
+			<Parameter name="fricPos" value="7.0"/>
+			<Parameter name="fricCF" value="2000.0"/>
+			<Parameter name="fricBW" value="700.0"/>
+			<Parameter name="r1" value="0.8"/>
+			<Parameter name="r2" value="0.89"/>
+			<Parameter name="r3" value="0.76"/>
+			<Parameter name="r4" value="1.28"/>
+			<Parameter name="r5" value="1.8"/>
+			<Parameter name="r6" value="0.99"/>
+			<Parameter name="r7" value="0.84"/>
+			<Parameter name="r8" value="0.1"/>
+			<Parameter name="velum" value="0.1"/>
+			<Symbol name="duration" value="6.0"/>
+			<Symbol name="transition" value="2.0"/>
+			<Symbol name="qssa" value="2.0"/>
+			<Symbol name="qssb" value="2.0"/>
+			<Category name="phone"/>
+			<Category name="silence"/>
+		</Phone>
+
+		<Phone name="qp'">
+			<Parameter name="microInt" value="-10.0"/>
+			<Parameter name="glotVol" value="0.0"/>
+			<Parameter name="aspVol" value="0.0"/>
+			<Parameter name="fricVol" value="0.0"/>
+			<Parameter name="fricPos" value="7.0"/>
+			<Parameter name="fricCF" value="2000.0"/>
+			<Parameter name="fricBW" value="700.0"/>
+			<Parameter name="r1" value="0.8"/>
+			<Parameter name="r2" value="0.89"/>
+			<Parameter name="r3" value="0.76"/>
+			<Parameter name="r4" value="1.28"/>
+			<Parameter name="r5" value="1.8"/>
+			<Parameter name="r6" value="0.99"/>
+			<Parameter name="r7" value="0.84"/>
+			<Parameter name="r8" value="0.1"/>
+			<Parameter name="velum" value="0.1"/>
+			<Symbol name="duration" value="6.0"/>
+			<Symbol name="transition" value="2.0"/>
+			<Symbol name="qssa" value="2.0"/>
+			<Symbol name="qssb" value="2.0"/>
+			<Category name="phone"/>
+			<Category name="silence"/>
+		</Phone>
+
+		<Phone name="qs" comment="Added for rewrite rule, to be inserted between s and whistlehack phones.">
+			<Parameter name="microInt" value="0.0"/>
+			<Parameter name="glotVol" value="0.0"/>
+			<Parameter name="aspVol" value="0.0"/>
+			<Parameter name="fricVol" value="0.0"/>
+			<Parameter name="fricPos" value="5.8"/>
+			<Parameter name="fricCF" value="5500.0"/>
+			<Parameter name="fricBW" value="500.0"/>
+			<Parameter name="r1" value="0.8"/>
+			<Parameter name="r2" value="1.31"/>
+			<Parameter name="r3" value="1.49"/>
+			<Parameter name="r4" value="1.25"/>
+			<Parameter name="r5" value="0.9"/>
+			<Parameter name="r6" value="0.2"/>
+			<Parameter name="r7" value="0.4"/>
+			<Parameter name="r8" value="1.31"/>
+			<Parameter name="velum" value="0.1"/>
+			<Symbol name="duration" value="6.0"/>
+			<Symbol name="transition" value="2.0"/>
+			<Symbol name="qssa" value="2.0"/>
+			<Symbol name="qssb" value="2.0"/>
+			<Category name="phone"/>
+			<Category name="silence"/>
+		</Phone>
+
+		<Phone name="qs'" comment="Added for rewrite rule, to be inserted between s and whistlehack phones.">
+			<Parameter name="microInt" value="0.0"/>
+			<Parameter name="glotVol" value="0.0"/>
+			<Parameter name="aspVol" value="0.0"/>
+			<Parameter name="fricVol" value="0.0"/>
+			<Parameter name="fricPos" value="5.8"/>
+			<Parameter name="fricCF" value="5500.0"/>
+			<Parameter name="fricBW" value="500.0"/>
+			<Parameter name="r1" value="0.8"/>
+			<Parameter name="r2" value="1.31"/>
+			<Parameter name="r3" value="1.49"/>
+			<Parameter name="r4" value="1.25"/>
+			<Parameter name="r5" value="0.9"/>
+			<Parameter name="r6" value="0.2"/>
+			<Parameter name="r7" value="0.4"/>
+			<Parameter name="r8" value="1.31"/>
+			<Parameter name="velum" value="0.1"/>
+			<Symbol name="duration" value="6.0"/>
+			<Symbol name="transition" value="2.0"/>
+			<Symbol name="qssa" value="2.0"/>
+			<Symbol name="qssb" value="2.0"/>
+			<Category name="phone"/>
+			<Category name="silence"/>
+		</Phone>
+
+		<Phone name="qt">
+			<Parameter name="microInt" value="-10.0"/>
+			<Parameter name="glotVol" value="0.0"/>
+			<Parameter name="aspVol" value="0.0"/>
+			<Parameter name="fricVol" value="0.0"/>
+			<Parameter name="fricPos" value="7.0"/>
+			<Parameter name="fricCF" value="4500.0"/>
+			<Parameter name="fricBW" value="2000.0"/>
+			<Parameter name="r1" value="0.8"/>
+			<Parameter name="r2" value="1.31"/>
+			<Parameter name="r3" value="1.49"/>
+			<Parameter name="r4" value="1.25"/>
+			<Parameter name="r5" value="0.76"/>
+			<Parameter name="r6" value="0.1"/>
+			<Parameter name="r7" value="1.44"/>
+			<Parameter name="r8" value="1.31"/>
+			<Parameter name="velum" value="0.1"/>
+			<Symbol name="duration" value="6.0"/>
+			<Symbol name="transition" value="2.0"/>
+			<Symbol name="qssa" value="2.0"/>
+			<Symbol name="qssb" value="2.0"/>
+			<Category name="phone"/>
+			<Category name="silence"/>
+		</Phone>
+
+		<Phone name="qt'">
+			<Parameter name="microInt" value="-10.0"/>
+			<Parameter name="glotVol" value="0.0"/>
+			<Parameter name="aspVol" value="0.0"/>
+			<Parameter name="fricVol" value="0.0"/>
+			<Parameter name="fricPos" value="7.0"/>
+			<Parameter name="fricCF" value="4500.0"/>
+			<Parameter name="fricBW" value="2000.0"/>
+			<Parameter name="r1" value="0.8"/>
+			<Parameter name="r2" value="1.31"/>
+			<Parameter name="r3" value="1.49"/>
+			<Parameter name="r4" value="1.25"/>
+			<Parameter name="r5" value="0.76"/>
+			<Parameter name="r6" value="0.1"/>
+			<Parameter name="r7" value="1.44"/>
+			<Parameter name="r8" value="1.31"/>
+			<Parameter name="velum" value="0.1"/>
+			<Symbol name="duration" value="6.0"/>
+			<Symbol name="transition" value="2.0"/>
+			<Symbol name="qssa" value="2.0"/>
+			<Symbol name="qssb" value="2.0"/>
+			<Category name="phone"/>
+			<Category name="silence"/>
+		</Phone>
+
+		<Phone name="qz" comment="Added for rewrite rule, to be inserted between z and whistlehack phones.">
+			<Parameter name="microInt" value="-1.0"/>
+			<Parameter name="glotVol" value="0.0"/>
+			<Parameter name="aspVol" value="0.0"/>
+			<Parameter name="fricVol" value="0.0"/>
+			<Parameter name="fricPos" value="5.8"/>
+			<Parameter name="fricCF" value="5500.0"/>
+			<Parameter name="fricBW" value="500.0"/>
+			<Parameter name="r1" value="0.8"/>
+			<Parameter name="r2" value="1.31"/>
+			<Parameter name="r3" value="1.49"/>
+			<Parameter name="r4" value="1.25"/>
+			<Parameter name="r5" value="0.9"/>
+			<Parameter name="r6" value="0.2"/>
+			<Parameter name="r7" value="0.6"/>
+			<Parameter name="r8" value="1.31"/>
+			<Parameter name="velum" value="0.1"/>
+			<Symbol name="duration" value="6.0"/>
+			<Symbol name="transition" value="2.0"/>
+			<Symbol name="qssa" value="2.0"/>
+			<Symbol name="qssb" value="2.0"/>
+			<Category name="phone"/>
+			<Category name="silence"/>
+		</Phone>
+
+		<Phone name="qz'" comment="Added for rewrite rule, to be inserted between z and whistlehack phones.">
+			<Parameter name="microInt" value="-1.0"/>
+			<Parameter name="glotVol" value="0.0"/>
+			<Parameter name="aspVol" value="0.0"/>
+			<Parameter name="fricVol" value="0.0"/>
+			<Parameter name="fricPos" value="5.8"/>
+			<Parameter name="fricCF" value="5500.0"/>
+			<Parameter name="fricBW" value="500.0"/>
+			<Parameter name="r1" value="0.8"/>
+			<Parameter name="r2" value="1.31"/>
+			<Parameter name="r3" value="1.49"/>
+			<Parameter name="r4" value="1.25"/>
+			<Parameter name="r5" value="0.9"/>
+			<Parameter name="r6" value="0.2"/>
+			<Parameter name="r7" value="0.6"/>
+			<Parameter name="r8" value="1.31"/>
+			<Parameter name="velum" value="0.1"/>
+			<Symbol name="duration" value="6.0"/>
+			<Symbol name="transition" value="2.0"/>
+			<Symbol name="qssa" value="2.0"/>
+			<Symbol name="qssb" value="2.0"/>
+			<Category name="phone"/>
+			<Category name="silence"/>
+		</Phone>
+
+		<Phone name="r">
+			<Parameter name="microInt" value="0.0"/>
+			<Parameter name="glotVol" value="60.0"/>
+			<Parameter name="aspVol" value="0.0"/>
+			<Parameter name="fricVol" value="0.0"/>
+			<Parameter name="fricPos" value="5.5"/>
+			<Parameter name="fricCF" value="2500.0"/>
+			<Parameter name="fricBW" value="500.0"/>
+			<Parameter name="r1" value="0.8"/>
+			<Parameter name="r2" value="1.31"/>
+			<Parameter name="r3" value="0.73"/>
+			<Parameter name="r4" value="1.07"/>
+			<Parameter name="r5" value="2.12"/>
+			<Parameter name="r6" value="0.47"/>
+			<Parameter name="r7" value="1.78"/>
+			<Parameter name="r8" value="0.65"/>
+			<Parameter name="velum" value="0.1"/>
+			<Symbol name="duration" value="40.4"/>
+			<Symbol name="transition" value="40.0"/>
+			<Symbol name="qssa" value="20.2"/>
+			<Symbol name="qssb" value="20.2"/>
+			<Category name="phone"/>
+			<Category name="contoid"/>
+			<Category name="glide"/>
+			<Category name="voiced"/>
+			<Category name="checked"/>
+			<Category name="lhack"/>
+		</Phone>
+
+		<Phone name="r'">
+			<Parameter name="microInt" value="0.0"/>
+			<Parameter name="glotVol" value="60.0"/>
+			<Parameter name="aspVol" value="0.0"/>
+			<Parameter name="fricVol" value="0.0"/>
+			<Parameter name="fricPos" value="5.5"/>
+			<Parameter name="fricCF" value="2500.0"/>
+			<Parameter name="fricBW" value="500.0"/>
+			<Parameter name="r1" value="0.8"/>
+			<Parameter name="r2" value="1.31"/>
+			<Parameter name="r3" value="0.73"/>
+			<Parameter name="r4" value="1.07"/>
+			<Parameter name="r5" value="2.12"/>
+			<Parameter name="r6" value="0.47"/>
+			<Parameter name="r7" value="1.78"/>
+			<Parameter name="r8" value="0.65"/>
+			<Parameter name="velum" value="0.1"/>
+			<Symbol name="duration" value="70.8"/>
+			<Symbol name="transition" value="40.0"/>
+			<Symbol name="qssa" value="35.4"/>
+			<Symbol name="qssb" value="35.4"/>
+			<Category name="contoid"/>
+			<Category name="glide"/>
+			<Category name="checked"/>
+			<Category name="voiced"/>
+			<Category name="phone"/>
+			<Category name="lhack"/>
+		</Phone>
+
+		<Phone name="rr">
+			<Parameter name="microInt" value="0.0"/>
+			<Parameter name="glotVol" value="60.0"/>
+			<Parameter name="aspVol" value="0.0"/>
+			<Parameter name="fricVol" value="0.0"/>
+			<Parameter name="fricPos" value="5.5"/>
+			<Parameter name="fricCF" value="2500.0"/>
+			<Parameter name="fricBW" value="500.0"/>
+			<Parameter name="r1" value="0.8"/>
+			<Parameter name="r2" value="1.31"/>
+			<Parameter name="r3" value="0.73"/>
+			<Parameter name="r4" value="1.31"/>
+			<Parameter name="r5" value="2.12"/>
+			<Parameter name="r6" value="0.63"/>
+			<Parameter name="r7" value="1.78"/>
+			<Parameter name="r8" value="0.65"/>
+			<Parameter name="velum" value="0.1"/>
+			<Symbol name="duration" value="40.4"/>
+			<Symbol name="transition" value="40.0"/>
+			<Symbol name="qssa" value="20.2"/>
+			<Symbol name="qssb" value="20.2"/>
+			<Category name="contoid"/>
+			<Category name="glide"/>
+			<Category name="checked"/>
+			<Category name="voiced"/>
+			<Category name="phone"/>
+			<Category name="lhack"/>
+		</Phone>
+
+		<Phone name="rr'">
+			<Parameter name="microInt" value="0.0"/>
+			<Parameter name="glotVol" value="60.0"/>
+			<Parameter name="aspVol" value="0.0"/>
+			<Parameter name="fricVol" value="0.0"/>
+			<Parameter name="fricPos" value="5.5"/>
+			<Parameter name="fricCF" value="2500.0"/>
+			<Parameter name="fricBW" value="500.0"/>
+			<Parameter name="r1" value="0.8"/>
+			<Parameter name="r2" value="1.31"/>
+			<Parameter name="r3" value="0.73"/>
+			<Parameter name="r4" value="1.31"/>
+			<Parameter name="r5" value="2.12"/>
+			<Parameter name="r6" value="0.63"/>
+			<Parameter name="r7" value="1.78"/>
+			<Parameter name="r8" value="0.65"/>
+			<Parameter name="velum" value="0.1"/>
+			<Symbol name="duration" value="70.8"/>
+			<Symbol name="transition" value="40.0"/>
+			<Symbol name="qssa" value="35.4"/>
+			<Symbol name="qssb" value="35.4"/>
+			<Category name="contoid"/>
+			<Category name="glide"/>
+			<Category name="checked"/>
+			<Category name="voiced"/>
+			<Category name="phone"/>
+			<Category name="lhack"/>
+		</Phone>
+
+		<Phone name="s" comment="">
+			<Parameter name="microInt" value="0.0"/>
+			<Parameter name="glotVol" value="0.0"/>
+			<Parameter name="aspVol" value="0.0"/>
+			<Parameter name="fricVol" value="0.8"/>
+			<Parameter name="fricPos" value="5.8"/>
+			<Parameter name="fricCF" value="5500.0"/>
+			<Parameter name="fricBW" value="500.0"/>
+			<Parameter name="r1" value="0.8"/>
+			<Parameter name="r2" value="1.31"/>
+			<Parameter name="r3" value="1.49"/>
+			<Parameter name="r4" value="1.25"/>
+			<Parameter name="r5" value="0.9"/>
+			<Parameter name="r6" value="0.2"/>
+			<Parameter name="r7" value="0.4"/>
+			<Parameter name="r8" value="1.31"/>
+			<Parameter name="velum" value="0.1"/>
+			<Symbol name="duration" value="78.2"/>
+			<Symbol name="transition" value="29.6"/>
+			<Symbol name="qssa" value="39.1"/>
+			<Symbol name="qssb" value="39.1"/>
+			<Category name="fortis"/>
+			<Category name="phone"/>
+			<Category name="contoid"/>
+			<Category name="fricative"/>
+			<Category name="checked"/>
+			<Category name="lhack"/>
+		</Phone>
+
+		<Phone name="s'" comment="">
+			<Parameter name="microInt" value="0.0"/>
+			<Parameter name="glotVol" value="0.0"/>
+			<Parameter name="aspVol" value="0.0"/>
+			<Parameter name="fricVol" value="0.8"/>
+			<Parameter name="fricPos" value="5.8"/>
+			<Parameter name="fricCF" value="5500.0"/>
+			<Parameter name="fricBW" value="500.0"/>
+			<Parameter name="r1" value="0.8"/>
+			<Parameter name="r2" value="1.31"/>
+			<Parameter name="r3" value="1.49"/>
+			<Parameter name="r4" value="1.25"/>
+			<Parameter name="r5" value="0.9"/>
+			<Parameter name="r6" value="0.2"/>
+			<Parameter name="r7" value="0.4"/>
+			<Parameter name="r8" value="1.31"/>
+			<Parameter name="velum" value="0.1"/>
+			<Symbol name="duration" value="111.6"/>
+			<Symbol name="transition" value="29.6"/>
+			<Symbol name="qssa" value="55.8"/>
+			<Symbol name="qssb" value="55.8"/>
+			<Category name="phone"/>
+			<Category name="contoid"/>
+			<Category name="fricative"/>
+			<Category name="checked"/>
+			<Category name="fortis"/>
+			<Category name="lhack"/>
+		</Phone>
+
+		<Phone name="sh">
+			<Parameter name="microInt" value="0.0"/>
+			<Parameter name="glotVol" value="0.0"/>
+			<Parameter name="aspVol" value="0.0"/>
+			<Parameter name="fricVol" value="0.4"/>
+			<Parameter name="fricPos" value="5.6"/>
+			<Parameter name="fricCF" value="2500.0"/>
+			<Parameter name="fricBW" value="2600.0"/>
+			<Parameter name="r1" value="0.8"/>
+			<Parameter name="r2" value="1.36"/>
+			<Parameter name="r3" value="1.74"/>
+			<Parameter name="r4" value="1.87"/>
+			<Parameter name="r5" value="0.94"/>
+			<Parameter name="r6" value="0.37"/>
+			<Parameter name="r7" value="0.79"/>
+			<Parameter name="r8" value="0.79"/>
+			<Parameter name="velum" value="0.1"/>
+			<Symbol name="duration" value="63.8"/>
+			<Symbol name="transition" value="24.2"/>
+			<Symbol name="qssa" value="31.9"/>
+			<Symbol name="qssb" value="31.9"/>
+			<Category name="phone"/>
+			<Category name="contoid"/>
+			<Category name="fricative"/>
+			<Category name="checked"/>
+			<Category name="fortis"/>
+			<Category name="lhack"/>
+		</Phone>
+
+		<Phone name="sh'">
+			<Parameter name="microInt" value="0.0"/>
+			<Parameter name="glotVol" value="0.0"/>
+			<Parameter name="aspVol" value="0.0"/>
+			<Parameter name="fricVol" value="0.4"/>
+			<Parameter name="fricPos" value="5.6"/>
+			<Parameter name="fricCF" value="2500.0"/>
+			<Parameter name="fricBW" value="2600.0"/>
+			<Parameter name="r1" value="0.8"/>
+			<Parameter name="r2" value="1.36"/>
+			<Parameter name="r3" value="1.74"/>
+			<Parameter name="r4" value="1.87"/>
+			<Parameter name="r5" value="0.94"/>
+			<Parameter name="r6" value="0.37"/>
+			<Parameter name="r7" value="0.79"/>
+			<Parameter name="r8" value="0.79"/>
+			<Parameter name="velum" value="0.1"/>
+			<Symbol name="duration" value="124.2"/>
+			<Symbol name="transition" value="24.2"/>
+			<Symbol name="qssa" value="62.1"/>
+			<Symbol name="qssb" value="62.1"/>
+			<Category name="phone"/>
+			<Category name="contoid"/>
+			<Category name="fricative"/>
+			<Category name="checked"/>
+			<Category name="fortis"/>
+			<Category name="lhack"/>
+		</Phone>
+
+		<Phone name="t">
+			<Parameter name="microInt" value="-10.0"/>
+			<Parameter name="glotVol" value="0.0"/>
+			<Parameter name="aspVol" value="0.0"/>
+			<Parameter name="fricVol" value="0.0"/>
+			<Parameter name="fricPos" value="7.0"/>
+			<Parameter name="fricCF" value="4500.0"/>
+			<Parameter name="fricBW" value="2000.0"/>
+			<Parameter name="r1" value="0.8"/>
+			<Parameter name="r2" value="1.31"/>
+			<Parameter name="r3" value="1.49"/>
+			<Parameter name="r4" value="1.25"/>
+			<Parameter name="r5" value="0.76"/>
+			<Parameter name="r6" value="0.1"/>
+			<Parameter name="r7" value="1.44"/>
+			<Parameter name="r8" value="1.31"/>
+			<Parameter name="velum" value="0.1"/>
+			<Symbol name="duration" value="49.8"/>
+			<Symbol name="transition" value="24.2"/>
+			<Symbol name="qssa" value="24.9"/>
+			<Symbol name="qssb" value="24.9"/>
+			<Category name="phone"/>
+			<Category name="contoid"/>
+			<Category name="stopped"/>
+			<Category name="checked"/>
+			<Category name="fortis"/>
+			<Category name="lhack"/>
+		</Phone>
+
+		<Phone name="t'">
+			<Parameter name="microInt" value="-10.0"/>
+			<Parameter name="glotVol" value="0.0"/>
+			<Parameter name="aspVol" value="0.0"/>
+			<Parameter name="fricVol" value="0.0"/>
+			<Parameter name="fricPos" value="7.0"/>
+			<Parameter name="fricCF" value="4500.0"/>
+			<Parameter name="fricBW" value="2000.0"/>
+			<Parameter name="r1" value="0.8"/>
+			<Parameter name="r2" value="1.31"/>
+			<Parameter name="r3" value="1.49"/>
+			<Parameter name="r4" value="1.25"/>
+			<Parameter name="r5" value="0.76"/>
+			<Parameter name="r6" value="0.1"/>
+			<Parameter name="r7" value="1.44"/>
+			<Parameter name="r8" value="1.31"/>
+			<Parameter name="velum" value="0.1"/>
+			<Symbol name="duration" value="70.4"/>
+			<Symbol name="transition" value="24.2"/>
+			<Symbol name="qssa" value="35.2"/>
+			<Symbol name="qssb" value="35.2"/>
+			<Category name="phone"/>
+			<Category name="contoid"/>
+			<Category name="stopped"/>
+			<Category name="checked"/>
+			<Category name="fortis"/>
+			<Category name="lhack"/>
+		</Phone>
+
+		<Phone name="th">
+			<Parameter name="microInt" value="0.0"/>
+			<Parameter name="glotVol" value="0.0"/>
+			<Parameter name="aspVol" value="0.0"/>
+			<Parameter name="fricVol" value="0.25"/>
+			<Parameter name="fricPos" value="6.0"/>
+			<Parameter name="fricCF" value="4400.0"/>
+			<Parameter name="fricBW" value="4500.0"/>
+			<Parameter name="r1" value="0.8"/>
+			<Parameter name="r2" value="1.2"/>
+			<Parameter name="r3" value="1.5"/>
+			<Parameter name="r4" value="1.35"/>
+			<Parameter name="r5" value="1.2"/>
+			<Parameter name="r6" value="1.2"/>
+			<Parameter name="r7" value="0.4"/>
+			<Parameter name="r8" value="1.0"/>
+			<Parameter name="velum" value="0.1"/>
+			<Symbol name="duration" value="54.6"/>
+			<Symbol name="transition" value="40.0"/>
+			<Symbol name="qssa" value="27.3"/>
+			<Symbol name="qssb" value="27.3"/>
+			<Category name="phone"/>
+			<Category name="contoid"/>
+			<Category name="fricative"/>
+			<Category name="checked"/>
+			<Category name="voiced"/>
+			<Category name="whistlehack"/>
+			<Category name="lhack"/>
+		</Phone>
+
+		<Phone name="th'">
+			<Parameter name="microInt" value="0.0"/>
+			<Parameter name="glotVol" value="0.0"/>
+			<Parameter name="aspVol" value="0.0"/>
+			<Parameter name="fricVol" value="0.25"/>
+			<Parameter name="fricPos" value="6.0"/>
+			<Parameter name="fricCF" value="4400.0"/>
+			<Parameter name="fricBW" value="4500.0"/>
+			<Parameter name="r1" value="0.8"/>
+			<Parameter name="r2" value="1.2"/>
+			<Parameter name="r3" value="1.5"/>
+			<Parameter name="r4" value="1.35"/>
+			<Parameter name="r5" value="1.2"/>
+			<Parameter name="r6" value="1.2"/>
+			<Parameter name="r7" value="0.4"/>
+			<Parameter name="r8" value="1.5"/>
+			<Parameter name="velum" value="0.1"/>
+			<Symbol name="duration" value="116.2"/>
+			<Symbol name="transition" value="40.0"/>
+			<Symbol name="qssa" value="58.1"/>
+			<Symbol name="qssb" value="58.1"/>
+			<Category name="phone"/>
+			<Category name="contoid"/>
+			<Category name="fricative"/>
+			<Category name="checked"/>
+			<Category name="voiced"/>
+			<Category name="whistlehack"/>
+			<Category name="lhack"/>
+		</Phone>
+
+		<Phone name="tx">
+			<Parameter name="microInt" value="-10.0"/>
+			<Parameter name="glotVol" value="0.0"/>
+			<Parameter name="aspVol" value="0.0"/>
+			<Parameter name="fricVol" value="0.0"/>
+			<Parameter name="fricPos" value="6.7"/>
+			<Parameter name="fricCF" value="4500.0"/>
+			<Parameter name="fricBW" value="2000.0"/>
+			<Parameter name="r1" value="0.8"/>
+			<Parameter name="r2" value="1.31"/>
+			<Parameter name="r3" value="1.49"/>
+			<Parameter name="r4" value="1.25"/>
+			<Parameter name="r5" value="0.76"/>
+			<Parameter name="r6" value="0.1"/>
+			<Parameter name="r7" value="1.44"/>
+			<Parameter name="r8" value="1.31"/>
+			<Parameter name="velum" value="0.1"/>
+			<Symbol name="duration" value="90.0"/>
+			<Symbol name="transition" value="24.2"/>
+			<Symbol name="qssa" value="45.0"/>
+			<Symbol name="qssb" value="45.0"/>
+			<Category name="phone"/>
+			<Category name="contoid"/>
+			<Category name="stopped"/>
+			<Category name="checked"/>
+			<Category name="fortis"/>
+			<Category name="lhack"/>
+		</Phone>
+
+		<Phone name="tx'">
+			<Parameter name="microInt" value="-10.0"/>
+			<Parameter name="glotVol" value="0.0"/>
+			<Parameter name="aspVol" value="0.0"/>
+			<Parameter name="fricVol" value="0.0"/>
+			<Parameter name="fricPos" value="6.7"/>
+			<Parameter name="fricCF" value="4500.0"/>
+			<Parameter name="fricBW" value="2000.0"/>
+			<Parameter name="r1" value="0.8"/>
+			<Parameter name="r2" value="1.31"/>
+			<Parameter name="r3" value="1.49"/>
+			<Parameter name="r4" value="1.25"/>
+			<Parameter name="r5" value="0.76"/>
+			<Parameter name="r6" value="0.1"/>
+			<Parameter name="r7" value="1.44"/>
+			<Parameter name="r8" value="1.31"/>
+			<Parameter name="velum" value="0.1"/>
+			<Symbol name="duration" value="107.0"/>
+			<Symbol name="transition" value="24.2"/>
+			<Symbol name="qssa" value="53.5"/>
+			<Symbol name="qssb" value="53.5"/>
+			<Category name="phone"/>
+			<Category name="contoid"/>
+			<Category name="stopped"/>
+			<Category name="checked"/>
+			<Category name="fortis"/>
+			<Category name="lhack"/>
+		</Phone>
+
+		<Phone name="u">
+			<Parameter name="microInt" value="0.0"/>
+			<Parameter name="glotVol" value="60.0"/>
+			<Parameter name="aspVol" value="0.0"/>
+			<Parameter name="fricVol" value="0.0"/>
+			<Parameter name="fricPos" value="5.5"/>
+			<Parameter name="fricCF" value="2500.0"/>
+			<Parameter name="fricBW" value="500.0"/>
+			<Parameter name="r1" value="0.8"/>
+			<Parameter name="r2" value="0.625"/>
+			<Parameter name="r3" value="0.6"/>
+			<Parameter name="r4" value="0.705"/>
+			<Parameter name="r5" value="1.12"/>
+			<Parameter name="r6" value="1.93"/>
+			<Parameter name="r7" value="1.515"/>
+			<Parameter name="r8" value="0.625"/>
+			<Parameter name="velum" value="0.1"/>
+			<Symbol name="duration" value="51.0"/>
+			<Symbol name="transition" value="27.8"/>
+			<Symbol name="qssa" value="12.9"/>
+			<Symbol name="qssb" value="12.9"/>
+			<Category name="phone"/>
+			<Category name="vocoid"/>
+			<Category name="voiced"/>
+		</Phone>
+
+		<Phone name="u'">
+			<Parameter name="microInt" value="0.0"/>
+			<Parameter name="glotVol" value="60.0"/>
+			<Parameter name="aspVol" value="0.0"/>
+			<Parameter name="fricVol" value="0.0"/>
+			<Parameter name="fricPos" value="5.5"/>
+			<Parameter name="fricCF" value="2500.0"/>
+			<Parameter name="fricBW" value="500.0"/>
+			<Parameter name="r1" value="0.8"/>
+			<Parameter name="r2" value="0.625"/>
+			<Parameter name="r3" value="0.6"/>
+			<Parameter name="r4" value="0.705"/>
+			<Parameter name="r5" value="1.12"/>
+			<Parameter name="r6" value="1.93"/>
+			<Parameter name="r7" value="1.515"/>
+			<Parameter name="r8" value="0.625"/>
+			<Parameter name="velum" value="0.1"/>
+			<Symbol name="duration" value="108.8"/>
+			<Symbol name="transition" value="27.8"/>
+			<Symbol name="qssa" value="41.8"/>
+			<Symbol name="qssb" value="41.8"/>
+			<Category name="phone"/>
+			<Category name="vocoid"/>
+			<Category name="voiced"/>
+		</Phone>
+
+		<Phone name="uh" comment="We have fiddled the duration by plus 20 msec because the very short qss was causing impulse problems in paramater construction. ">
+			<Parameter name="microInt" value="0.0"/>
+			<Parameter name="glotVol" value="60.0"/>
+			<Parameter name="aspVol" value="0.0"/>
+			<Parameter name="fricVol" value="0.0"/>
+			<Parameter name="fricPos" value="5.5"/>
+			<Parameter name="fricCF" value="2500.0"/>
+			<Parameter name="fricBW" value="500.0"/>
+			<Parameter name="r1" value="0.8"/>
+			<Parameter name="r2" value="0.89"/>
+			<Parameter name="r3" value="0.99"/>
+			<Parameter name="r4" value="0.81"/>
+			<Parameter name="r5" value="0.76"/>
+			<Parameter name="r6" value="1.05"/>
+			<Parameter name="r7" value="1.23"/>
+			<Parameter name="r8" value="1.12"/>
+			<Parameter name="velum" value="0.1"/>
+			<Symbol name="duration" value="46.2"/>
+			<Symbol name="transition" value="27.8"/>
+			<Symbol name="qssa" value="10.4"/>
+			<Symbol name="qssb" value="10.4"/>
+			<Category name="phone"/>
+			<Category name="vocoid"/>
+			<Category name="voiced"/>
+		</Phone>
+
+		<Phone name="uh'" comment="">
+			<Parameter name="microInt" value="0.0"/>
+			<Parameter name="glotVol" value="60.0"/>
+			<Parameter name="aspVol" value="0.0"/>
+			<Parameter name="fricVol" value="0.0"/>
+			<Parameter name="fricPos" value="5.5"/>
+			<Parameter name="fricCF" value="2500.0"/>
+			<Parameter name="fricBW" value="500.0"/>
+			<Parameter name="r1" value="0.8"/>
+			<Parameter name="r2" value="0.89"/>
+			<Parameter name="r3" value="0.99"/>
+			<Parameter name="r4" value="0.81"/>
+			<Parameter name="r5" value="0.76"/>
+			<Parameter name="r6" value="1.05"/>
+			<Parameter name="r7" value="1.23"/>
+			<Parameter name="r8" value="1.12"/>
+			<Parameter name="velum" value="0.1"/>
+			<Symbol name="duration" value="74.0"/>
+			<Symbol name="transition" value="27.8"/>
+			<Symbol name="qssa" value="24.4"/>
+			<Symbol name="qssb" value="24.4"/>
+			<Category name="phone"/>
+			<Category name="vocoid"/>
+			<Category name="voiced"/>
+		</Phone>
+
+		<Phone name="un">
+			<Parameter name="microInt" value="0.0"/>
+			<Parameter name="glotVol" value="60.0"/>
+			<Parameter name="aspVol" value="0.0"/>
+			<Parameter name="fricVol" value="0.0"/>
+			<Parameter name="fricPos" value="5.5"/>
+			<Parameter name="fricCF" value="2500.0"/>
+			<Parameter name="fricBW" value="500.0"/>
+			<Parameter name="r1" value="0.8"/>
+			<Parameter name="r2" value="0.885"/>
+			<Parameter name="r3" value="0.99"/>
+			<Parameter name="r4" value="0.81"/>
+			<Parameter name="r5" value="0.755"/>
+			<Parameter name="r6" value="1.045"/>
+			<Parameter name="r7" value="1.225"/>
+			<Parameter name="r8" value="1.12"/>
+			<Parameter name="velum" value="1.5"/>
+			<Symbol name="duration" value="46.2"/>
+			<Symbol name="transition" value="27.8"/>
+			<Symbol name="qssa" value="23.1"/>
+			<Symbol name="qssb" value="23.1"/>
+			<Category name="phone"/>
+			<Category name="vocoid"/>
+			<Category name="voiced"/>
+		</Phone>
+
+		<Phone name="un'">
+			<Parameter name="microInt" value="0.0"/>
+			<Parameter name="glotVol" value="60.0"/>
+			<Parameter name="aspVol" value="0.0"/>
+			<Parameter name="fricVol" value="0.0"/>
+			<Parameter name="fricPos" value="5.5"/>
+			<Parameter name="fricCF" value="2500.0"/>
+			<Parameter name="fricBW" value="500.0"/>
+			<Parameter name="r1" value="0.8"/>
+			<Parameter name="r2" value="0.885"/>
+			<Parameter name="r3" value="0.99"/>
+			<Parameter name="r4" value="0.81"/>
+			<Parameter name="r5" value="0.755"/>
+			<Parameter name="r6" value="1.045"/>
+			<Parameter name="r7" value="1.225"/>
+			<Parameter name="r8" value="1.12"/>
+			<Parameter name="velum" value="1.5"/>
+			<Symbol name="duration" value="74.0"/>
+			<Symbol name="transition" value="27.8"/>
+			<Symbol name="qssa" value="24.4"/>
+			<Symbol name="qssb" value="24.4"/>
+			<Category name="phone"/>
+			<Category name="vocoid"/>
+			<Category name="voiced"/>
+		</Phone>
+
+		<Phone name="uu" comment="We have doubled the qss's because uu tends to get underestimated as it is often final and dies away.">
+			<Parameter name="microInt" value="0.0"/>
+			<Parameter name="glotVol" value="60.0"/>
+			<Parameter name="aspVol" value="0.0"/>
+			<Parameter name="fricVol" value="0.0"/>
+			<Parameter name="fricPos" value="5.5"/>
+			<Parameter name="fricCF" value="2500.0"/>
+			<Parameter name="fricBW" value="500.0"/>
+			<Parameter name="r1" value="0.8"/>
+			<Parameter name="r2" value="1.91"/>
+			<Parameter name="r3" value="1.44"/>
+			<Parameter name="r4" value="0.6"/>
+			<Parameter name="r5" value="1.02"/>
+			<Parameter name="r6" value="1.33"/>
+			<Parameter name="r7" value="1.56"/>
+			<Parameter name="r8" value="0.55"/>
+			<Parameter name="velum" value="0.1"/>
+			<Symbol name="duration" value="105.2"/>
+			<Symbol name="transition" value="27.8"/>
+			<Symbol name="qssa" value="40.0"/>
+			<Symbol name="qssb" value="40.0"/>
+			<Category name="phone"/>
+			<Category name="vocoid"/>
+			<Category name="voiced"/>
+		</Phone>
+
+		<Phone name="uu'" comment="We have increased the qss's because uu tends to get underestimated as it is often final and dies away.  The ' version is longer in proportion to the not-' version by rough comparison with other vowels.  Yes!!! This is *very* ad hoc and Len disapproves!">
+			<Parameter name="microInt" value="0.0"/>
+			<Parameter name="glotVol" value="60.0"/>
+			<Parameter name="aspVol" value="0.0"/>
+			<Parameter name="fricVol" value="0.0"/>
+			<Parameter name="fricPos" value="5.5"/>
+			<Parameter name="fricCF" value="2500.0"/>
+			<Parameter name="fricBW" value="500.0"/>
+			<Parameter name="r1" value="0.8"/>
+			<Parameter name="r2" value="1.91"/>
+			<Parameter name="r3" value="1.44"/>
+			<Parameter name="r4" value="0.6"/>
+			<Parameter name="r5" value="1.02"/>
+			<Parameter name="r6" value="1.33"/>
+			<Parameter name="r7" value="1.56"/>
+			<Parameter name="r8" value="0.55"/>
+			<Parameter name="velum" value="0.1"/>
+			<Symbol name="duration" value="145.2"/>
+			<Symbol name="transition" value="27.8"/>
+			<Symbol name="qssa" value="60.0"/>
+			<Symbol name="qssb" value="60.0"/>
+			<Category name="phone"/>
+			<Category name="vocoid"/>
+			<Category name="voiced"/>
+		</Phone>
+
+		<Phone name="v">
+			<Parameter name="microInt" value="-1.0"/>
+			<Parameter name="glotVol" value="54.0"/>
+			<Parameter name="aspVol" value="0.0"/>
+			<Parameter name="fricVol" value="0.2"/>
+			<Parameter name="fricPos" value="7.0"/>
+			<Parameter name="fricCF" value="3300.0"/>
+			<Parameter name="fricBW" value="1000.0"/>
+			<Parameter name="r1" value="0.8"/>
+			<Parameter name="r2" value="0.89"/>
+			<Parameter name="r3" value="0.99"/>
+			<Parameter name="r4" value="0.81"/>
+			<Parameter name="r5" value="0.76"/>
+			<Parameter name="r6" value="0.89"/>
+			<Parameter name="r7" value="0.84"/>
+			<Parameter name="r8" value="0.5"/>
+			<Parameter name="velum" value="0.1"/>
+			<Symbol name="duration" value="48.4"/>
+			<Symbol name="transition" value="44.0"/>
+			<Symbol name="qssa" value="24.2"/>
+			<Symbol name="qssb" value="24.2"/>
+			<Category name="phone"/>
+			<Category name="contoid"/>
+			<Category name="fricative"/>
+			<Category name="checked"/>
+			<Category name="voiced"/>
+			<Category name="whistlehack"/>
+			<Category name="lhack"/>
+		</Phone>
+
+		<Phone name="v'">
+			<Parameter name="microInt" value="-1.0"/>
+			<Parameter name="glotVol" value="54.0"/>
+			<Parameter name="aspVol" value="0.0"/>
+			<Parameter name="fricVol" value="0.2"/>
+			<Parameter name="fricPos" value="7.0"/>
+			<Parameter name="fricCF" value="3300.0"/>
+			<Parameter name="fricBW" value="1000.0"/>
+			<Parameter name="r1" value="0.8"/>
+			<Parameter name="r2" value="0.89"/>
+			<Parameter name="r3" value="0.99"/>
+			<Parameter name="r4" value="0.81"/>
+			<Parameter name="r5" value="0.76"/>
+			<Parameter name="r6" value="0.89"/>
+			<Parameter name="r7" value="0.84"/>
+			<Parameter name="r8" value="0.5"/>
+			<Parameter name="velum" value="0.1"/>
+			<Symbol name="duration" value="70.0"/>
+			<Symbol name="transition" value="44.0"/>
+			<Symbol name="qssa" value="35.0"/>
+			<Symbol name="qssb" value="35.0"/>
+			<Category name="phone"/>
+			<Category name="contoid"/>
+			<Category name="fricative"/>
+			<Category name="checked"/>
+			<Category name="voiced"/>
+			<Category name="whistlehack"/>
+			<Category name="lhack"/>
+		</Phone>
+
+		<Phone name="w" comment="">
+			<Parameter name="microInt" value="0.0"/>
+			<Parameter name="glotVol" value="60.0"/>
+			<Parameter name="aspVol" value="0.0"/>
+			<Parameter name="fricVol" value="0.0"/>
+			<Parameter name="fricPos" value="5.5"/>
+			<Parameter name="fricCF" value="2500.0"/>
+			<Parameter name="fricBW" value="500.0"/>
+			<Parameter name="r1" value="0.8"/>
+			<Parameter name="r2" value="1.91"/>
+			<Parameter name="r3" value="1.44"/>
+			<Parameter name="r4" value="0.6"/>
+			<Parameter name="r5" value="1.02"/>
+			<Parameter name="r6" value="1.33"/>
+			<Parameter name="r7" value="1.56"/>
+			<Parameter name="r8" value="0.55"/>
+			<Parameter name="velum" value="0.1"/>
+			<Symbol name="duration" value="47.4"/>
+			<Symbol name="transition" value="33.7"/>
+			<Symbol name="qssa" value="23.7"/>
+			<Symbol name="qssb" value="23.7"/>
+			<Category name="phone"/>
+			<Category name="contoid"/>
+			<Category name="glide"/>
+			<Category name="voiced"/>
+			<Category name="checked"/>
+			<Category name="lhack"/>
+		</Phone>
+
+		<Phone name="w'" comment="">
+			<Parameter name="microInt" value="0.0"/>
+			<Parameter name="glotVol" value="60.0"/>
+			<Parameter name="aspVol" value="0.0"/>
+			<Parameter name="fricVol" value="0.0"/>
+			<Parameter name="fricPos" value="5.5"/>
+			<Parameter name="fricCF" value="2500.0"/>
+			<Parameter name="fricBW" value="500.0"/>
+			<Parameter name="r1" value="0.8"/>
+			<Parameter name="r2" value="1.91"/>
+			<Parameter name="r3" value="1.44"/>
+			<Parameter name="r4" value="0.6"/>
+			<Parameter name="r5" value="1.02"/>
+			<Parameter name="r6" value="1.33"/>
+			<Parameter name="r7" value="1.56"/>
+			<Parameter name="r8" value="0.55"/>
+			<Parameter name="velum" value="0.1"/>
+			<Symbol name="duration" value="68.6"/>
+			<Symbol name="transition" value="33.7"/>
+			<Symbol name="qssa" value="34.3"/>
+			<Symbol name="qssb" value="34.3"/>
+			<Category name="phone"/>
+			<Category name="contoid"/>
+			<Category name="glide"/>
+			<Category name="checked"/>
+			<Category name="voiced"/>
+			<Category name="lhack"/>
+		</Phone>
+
+		<Phone name="x">
+			<Parameter name="microInt" value="0.0"/>
+			<Parameter name="glotVol" value="0.0"/>
+			<Parameter name="aspVol" value="0.0"/>
+			<Parameter name="fricVol" value="0.5"/>
+			<Parameter name="fricPos" value="2.0"/>
+			<Parameter name="fricCF" value="1770.0"/>
+			<Parameter name="fricBW" value="900.0"/>
+			<Parameter name="r1" value="0.8"/>
+			<Parameter name="r2" value="1.7"/>
+			<Parameter name="r3" value="1.3"/>
+			<Parameter name="r4" value="0.4"/>
+			<Parameter name="r5" value="0.99"/>
+			<Parameter name="r6" value="1.07"/>
+			<Parameter name="r7" value="0.73"/>
+			<Parameter name="r8" value="1.49"/>
+			<Parameter name="velum" value="0.1"/>
+			<Symbol name="duration" value="98.0"/>
+			<Symbol name="transition" value="30.0"/>
+			<Symbol name="qssa" value="49.0"/>
+			<Symbol name="qssb" value="49.0"/>
+			<Category name="phone"/>
+			<Category name="contoid"/>
+			<Category name="fricative"/>
+		</Phone>
+
+		<Phone name="x'">
+			<Parameter name="microInt" value="0.0"/>
+			<Parameter name="glotVol" value="0.0"/>
+			<Parameter name="aspVol" value="0.0"/>
+			<Parameter name="fricVol" value="0.5"/>
+			<Parameter name="fricPos" value="2.0"/>
+			<Parameter name="fricCF" value="1770.0"/>
+			<Parameter name="fricBW" value="900.0"/>
+			<Parameter name="r1" value="0.8"/>
+			<Parameter name="r2" value="1.7"/>
+			<Parameter name="r3" value="1.3"/>
+			<Parameter name="r4" value="0.4"/>
+			<Parameter name="r5" value="0.99"/>
+			<Parameter name="r6" value="1.07"/>
+			<Parameter name="r7" value="0.73"/>
+			<Parameter name="r8" value="1.49"/>
+			<Parameter name="velum" value="0.1"/>
+			<Symbol name="duration" value="124.0"/>
+			<Symbol name="transition" value="45.0"/>
+			<Symbol name="qssa" value="62.0"/>
+			<Symbol name="qssb" value="62.0"/>
+			<Category name="phone"/>
+			<Category name="contoid"/>
+			<Category name="fricative"/>
+		</Phone>
+
+		<Phone name="y" comment="Nasalized this phone slightly (velum = 0.25).  This results in better transitions with nasals (i.e. n y uu), and eliminates the bumping.  Has no ill effects on y's in other, non-nasalized contexts.">
+			<Parameter name="microInt" value="0.0"/>
+			<Parameter name="glotVol" value="60.0"/>
+			<Parameter name="aspVol" value="0.0"/>
+			<Parameter name="fricVol" value="0.0"/>
+			<Parameter name="fricPos" value="5.5"/>
+			<Parameter name="fricCF" value="2500.0"/>
+			<Parameter name="fricBW" value="500.0"/>
+			<Parameter name="r1" value="0.8"/>
+			<Parameter name="r2" value="1.67"/>
+			<Parameter name="r3" value="1.91"/>
+			<Parameter name="r4" value="1.99"/>
+			<Parameter name="r5" value="0.63"/>
+			<Parameter name="r6" value="0.29"/>
+			<Parameter name="r7" value="0.58"/>
+			<Parameter name="r8" value="1.49"/>
+			<Parameter name="velum" value="0.25"/>
+			<Symbol name="duration" value="54.6"/>
+			<Symbol name="transition" value="37.7"/>
+			<Symbol name="qssa" value="27.3"/>
+			<Symbol name="qssb" value="27.3"/>
+			<Category name="contoid"/>
+			<Category name="glide"/>
+			<Category name="voiced"/>
+			<Category name="phone"/>
+		</Phone>
+
+		<Phone name="y'" comment="Nasalized this phone slightly (velum = 0.25).  This results in better transitions with nasals (i.e. n y uu), and eliminates the bumping.  Has no ill effects on y's in other, non-nasalized contexts.">
+			<Parameter name="microInt" value="0.0"/>
+			<Parameter name="glotVol" value="60.0"/>
+			<Parameter name="aspVol" value="0.0"/>
+			<Parameter name="fricVol" value="0.0"/>
+			<Parameter name="fricPos" value="5.5"/>
+			<Parameter name="fricCF" value="2500.0"/>
+			<Parameter name="fricBW" value="500.0"/>
+			<Parameter name="r1" value="0.8"/>
+			<Parameter name="r2" value="1.67"/>
+			<Parameter name="r3" value="1.91"/>
+			<Parameter name="r4" value="1.99"/>
+			<Parameter name="r5" value="0.63"/>
+			<Parameter name="r6" value="0.29"/>
+			<Parameter name="r7" value="0.58"/>
+			<Parameter name="r8" value="1.49"/>
+			<Parameter name="velum" value="0.25"/>
+			<Symbol name="duration" value="84.4"/>
+			<Symbol name="transition" value="37.7"/>
+			<Symbol name="qssa" value="42.2"/>
+			<Symbol name="qssb" value="42.2"/>
+			<Category name="contoid"/>
+			<Category name="glide"/>
+			<Category name="voiced"/>
+			<Category name="phone"/>
+		</Phone>
+
+		<Phone name="z">
+			<Parameter name="microInt" value="-1.0"/>
+			<Parameter name="glotVol" value="54.0"/>
+			<Parameter name="aspVol" value="0.0"/>
+			<Parameter name="fricVol" value="0.8"/>
+			<Parameter name="fricPos" value="5.8"/>
+			<Parameter name="fricCF" value="5500.0"/>
+			<Parameter name="fricBW" value="500.0"/>
+			<Parameter name="r1" value="0.8"/>
+			<Parameter name="r2" value="1.31"/>
+			<Parameter name="r3" value="1.49"/>
+			<Parameter name="r4" value="1.25"/>
+			<Parameter name="r5" value="0.9"/>
+			<Parameter name="r6" value="0.2"/>
+			<Parameter name="r7" value="0.6"/>
+			<Parameter name="r8" value="1.31"/>
+			<Parameter name="velum" value="0.1"/>
+			<Symbol name="duration" value="56.6"/>
+			<Symbol name="transition" value="30.4"/>
+			<Symbol name="qssa" value="28.3"/>
+			<Symbol name="qssb" value="28.3"/>
+			<Category name="phone"/>
+			<Category name="contoid"/>
+			<Category name="fricative"/>
+			<Category name="voiced"/>
+			<Category name="fortis"/>
+			<Category name="checked"/>
+			<Category name="lhack"/>
+		</Phone>
+
+		<Phone name="z'">
+			<Parameter name="microInt" value="-1.0"/>
+			<Parameter name="glotVol" value="54.0"/>
+			<Parameter name="aspVol" value="0.0"/>
+			<Parameter name="fricVol" value="0.8"/>
+			<Parameter name="fricPos" value="5.8"/>
+			<Parameter name="fricCF" value="5500.0"/>
+			<Parameter name="fricBW" value="500.0"/>
+			<Parameter name="r1" value="0.8"/>
+			<Parameter name="r2" value="1.31"/>
+			<Parameter name="r3" value="1.49"/>
+			<Parameter name="r4" value="1.25"/>
+			<Parameter name="r5" value="0.9"/>
+			<Parameter name="r6" value="0.2"/>
+			<Parameter name="r7" value="0.6"/>
+			<Parameter name="r8" value="1.31"/>
+			<Parameter name="velum" value="0.1"/>
+			<Symbol name="duration" value="84.8"/>
+			<Symbol name="transition" value="30.4"/>
+			<Symbol name="qssa" value="42.4"/>
+			<Symbol name="qssb" value="42.4"/>
+			<Category name="phone"/>
+			<Category name="contoid"/>
+			<Category name="fricative"/>
+			<Category name="voiced"/>
+			<Category name="fortis"/>
+			<Category name="checked"/>
+			<Category name="lhack"/>
+		</Phone>
+
+		<Phone name="zh">
+			<Parameter name="microInt" value="-1.0"/>
+			<Parameter name="glotVol" value="54.0"/>
+			<Parameter name="aspVol" value="0.0"/>
+			<Parameter name="fricVol" value="0.4"/>
+			<Parameter name="fricPos" value="5.6"/>
+			<Parameter name="fricCF" value="2500.0"/>
+			<Parameter name="fricBW" value="2600.0"/>
+			<Parameter name="r1" value="0.8"/>
+			<Parameter name="r2" value="1.36"/>
+			<Parameter name="r3" value="1.74"/>
+			<Parameter name="r4" value="1.87"/>
+			<Parameter name="r5" value="0.94"/>
+			<Parameter name="r6" value="0.37"/>
+			<Parameter name="r7" value="0.79"/>
+			<Parameter name="r8" value="0.79"/>
+			<Parameter name="velum" value="0.1"/>
+			<Symbol name="duration" value="40.0"/>
+			<Symbol name="transition" value="29.6"/>
+			<Symbol name="qssa" value="20.0"/>
+			<Symbol name="qssb" value="20.0"/>
+			<Category name="phone"/>
+			<Category name="contoid"/>
+			<Category name="fricative"/>
+			<Category name="checked"/>
+			<Category name="voiced"/>
+			<Category name="fortis"/>
+			<Category name="lhack"/>
+		</Phone>
+
+		<Phone name="zh'">
+			<Parameter name="microInt" value="-1.0"/>
+			<Parameter name="glotVol" value="54.0"/>
+			<Parameter name="aspVol" value="0.0"/>
+			<Parameter name="fricVol" value="0.4"/>
+			<Parameter name="fricPos" value="5.6"/>
+			<Parameter name="fricCF" value="2500.0"/>
+			<Parameter name="fricBW" value="2600.0"/>
+			<Parameter name="r1" value="0.8"/>
+			<Parameter name="r2" value="1.36"/>
+			<Parameter name="r3" value="1.74"/>
+			<Parameter name="r4" value="1.87"/>
+			<Parameter name="r5" value="0.94"/>
+			<Parameter name="r6" value="0.37"/>
+			<Parameter name="r7" value="0.79"/>
+			<Parameter name="r8" value="0.79"/>
+			<Parameter name="velum" value="0.1"/>
+			<Symbol name="duration" value="83.0"/>
+			<Symbol name="transition" value="29.6"/>
+			<Symbol name="qssa" value="41.5"/>
+			<Symbol name="qssb" value="41.5"/>
+			<Category name="phone"/>
+			<Category name="contoid"/>
+			<Category name="fricative"/>
+			<Category name="checked"/>
+			<Category name="voiced"/>
+			<Category name="fortis"/>
+			<Category name="lhack"/>
+		</Phone>
+
+	</MainPhoneList>
+</Monet>
+

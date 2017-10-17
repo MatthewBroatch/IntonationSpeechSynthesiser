@@ -1,12 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <Project Sdk="Microsoft.NET.Sdk">
-
   <ItemGroup>
-    <ProjectReference Include="..\ISS.Infrastructure\ISS.Infrastructure.csproj" />
+    <ProjectReference Include="..\ISS.Infrastructure\ISS.Infrastructure.csproj"/>
   </ItemGroup>
-
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="2.0.0"/>
+    <PackageReference Include="Microsoft.Extensions.Configuration" Version="2.0.0"/>
+    <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="2.0.0"/>
+    <PackageReference Include="Microsoft.Extensions.Logging" Version="2.0.0"/>
+    <PackageReference Include="Microsoft.Extensions.Logging.Console" Version="2.0.0"/>
+  </ItemGroup>
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>netcoreapp2.0</TargetFramework>
   </PropertyGroup>
-
 </Project>

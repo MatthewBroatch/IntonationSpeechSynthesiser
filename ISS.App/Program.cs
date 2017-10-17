@@ -1,12 +1,32 @@
 ﻿using System;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Logging;
 
 namespace ISS.App
 {
-    class Program
+  class Program
+  {
+    static void Main(string[] args)
     {
-        static void Main(string[] args)
-        {
-            Console.WriteLine("Hello World!");
-        }
+      IServiceCollection services = new ServiceCollection();
+      // Startup.cs finally :)
+      Startup startup = new Startup();
+      startup.ConfigureServices(services);
+      IServiceProvider serviceProvider = services.BuildServiceProvider();
+
+      //configure console logging
+      serviceProvider
+          .GetService<ILoggerFactory>()
+          .AddConsole(LogLevel.Debug);
+
+      var logger = serviceProvider.GetService<ILoggerFactory>()
+          .CreateLogger<Program>();
+
+      logger.LogDebug("Logger is working!");
+
+      // Get Service and call method
+      // var service = serviceProvider.GetService<IMyService>();
+      // service.MyServiceMethod();
     }
+  }
 }
