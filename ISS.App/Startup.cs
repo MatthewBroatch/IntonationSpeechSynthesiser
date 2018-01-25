@@ -1,3 +1,5 @@
+using ISS.Infrastructure.Services;
+using ISS.Infrastructure.Stores;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -19,7 +21,11 @@ namespace ISS.App
     {
       services.AddLogging();
       services.AddSingleton<IConfigurationRoot>(Configuration);
-      // services.AddSingleton<IMyService, MyService>();
+
+      services.AddTransient<ConsoleListener>();
+      services.AddTransient<IPhoneticParserService, PhoneticParserService>();
+      services.AddTransient<IIntonationModelService, IntonationModelService>();
+      services.AddSingleton<IPhoneticStore>(provider => new MonetPhoneticStore(Configuration["phoneList"]));
     }
   }
 }

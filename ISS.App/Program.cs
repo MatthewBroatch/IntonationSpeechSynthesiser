@@ -22,11 +22,12 @@ namespace ISS.App
       var logger = serviceProvider.GetService<ILoggerFactory>()
           .CreateLogger<Program>();
 
-      logger.LogDebug("Logger is working!");
-
       // Get Service and call method
-      // var service = serviceProvider.GetService<IMyService>();
-      // service.MyServiceMethod();
+      var listener = serviceProvider.GetService<ConsoleListener>();
+      if(args.Length == 0)
+        listener.StartListening();
+      else
+        listener.ConvertInput(args[0]);
     }
   }
 }

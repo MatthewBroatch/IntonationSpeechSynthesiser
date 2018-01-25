@@ -2,14 +2,14 @@ using System.Collections.Generic;
 
 namespace ISS.Infrastructure.Models
 {
-  internal class Vowel
+  public class Vowel
   {
-    string IpaName { get; set; }
-    string GnuName { get; set; }
-    double Distance { get; set; }
-    double Height { get; set; }
-    VowelRounded Rounded { get; set; } 
-    float Range { get; set; }
-    IEnumerable<float> RadiusSegments { get; set; }
+    public string IpaName { get; set; }
+    public string GnuName { get; set; }
+    public double Distance { get; set; }
+    public double Height { get; set; }
+    public VowelRounded Rounded { get; set; } 
+    public double Range { get; set; }
+    public IEnumerable<double> RadiusSegments { get; set; }
   }
 }

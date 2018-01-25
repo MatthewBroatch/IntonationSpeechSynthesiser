@@ -2,36 +2,31 @@ using System.Collections.Generic;
 
 namespace ISS.Infrastructure.Models
 {
-  internal class Phonetic
+  public class Phonetic
   {
-    string Name { get; set; }
-    double MicroInt { get; set; }
-    double GlotVol { get; set; }
-    double AspVol { get; set; }
-    double FricVol { get; set; }
-    double FricPos { get; set; }
-    double FricCF { get; set; }
-    double FricBW { get; set; }
+    public string Name { get; set; }
+    public double MicroInt { get; set; }
+    public double GlotVol { get; set; }
+    public double AspVol { get; set; }
+    public double FricVol { get; set; }
+    public double FricPos { get; set; }
+    public double FricCF { get; set; }
+    public double FricBW { get; set; }
 
     //Throat and mouth raduis
-    IEnumerable<float> RaduisSegments { get; set; }
+    public IEnumerable<double> RadiusSegments { get; set; }
 
     //The bit connecting your nose and mouth
-    double Velum { get; set; }
-    double Duration { get; set; }
-    double Transition { get; set; }
+    public double Velum { get; set; }
+    public double Duration { get; set; }
+    public double Transition { get; set; }
 
     //Todo Figure out what this is
-    // double qssa { get; set; }
-    // double qssb { get; set; }
+    public double Qssa { get; set; }
+    public double Qssb { get; set; }
 
-    short Fricative { get; set; }
-    short Affricate { get; set; }
-    short Glide { get; set; }
-    short Voiced { get; set; }
-    short Stopped { get; set; }
-    short Aspiration { get; set; }
-    Vowel Vowel { get; set; }
-    PhoneticEnd End { get; set; }
+    // public Vowel Vowel { get; set; }
+    // public PhoneticEnd End { get; set; }
+    public IEnumerable<Category> Categories { get; set; }
   }
 }
