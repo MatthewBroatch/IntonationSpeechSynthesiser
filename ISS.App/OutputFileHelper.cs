@@ -12,10 +12,21 @@ namespace ISS.App
     public const string OutputFileName = "intonation-synth-output.txt";
     public static void Print(OutputFileProperties properties, IEnumerable<IntonationModel> model)
     {
-      if (File.Exists(OutputFileName))
-        File.Delete(OutputFileName);
-      File.Create(OutputFileName).Close();
-      var writer = File.AppendText(OutputFileName);
+      StreamWriter writer = null;
+      if (false) //todo write to file
+      {
+        // if (File.Exists(OutputFileName))
+        //   File.Delete(OutputFileName);
+        // File.Create(OutputFileName).Close();
+        // writer = File.AppendText(OutputFileName);
+      }
+      else 
+      {
+        writer = new StreamWriter(Console.OpenStandardOutput());
+        writer.AutoFlush = true;
+        Console.SetOut(writer);
+      }
+
       writer.WriteLine($"{properties.OutputFileFormat}\t; output file format (0 = AU, 1 = AIFF, 2 = WAVE)");
       writer.WriteLine($"{properties.OutputSampleRate:F1}\t; output sample rate (22050.0, 44100.0)");
       writer.WriteLine($"{properties.InControlRate:F1}\t; input control rate (1 - 1000 Hz)");

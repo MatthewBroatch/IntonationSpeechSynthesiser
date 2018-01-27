@@ -1,4 +1,5 @@
 using System;
+using System.Linq;
 using ISS.App.Models;
 using ISS.Infrastructure.Services;
 using ISS.Infrastructure.Stores;
@@ -9,23 +10,29 @@ namespace ISS.App
   {
     private IPhoneticParserService _phoneticParserService;
     private IIntonationModelService _intonationModelService;
+    private IPhoneticStore _phoneticStore;
+    private ITextToPhoneticsService _textToPhoneticsService;
 
     public ConsoleListener(
       IPhoneticParserService phoneticParserService,
-      IIntonationModelService intonationModelService)
+      IIntonationModelService intonationModelService,
+      IPhoneticStore phoneticStore,
+      ITextToPhoneticsService textToPhoneticsService)
     {
       _phoneticParserService = phoneticParserService;
       _intonationModelService = intonationModelService;
+      _phoneticStore = phoneticStore;
+      _textToPhoneticsService = textToPhoneticsService;
     }
 
-    public void StartListening()
+    public void StartListening(bool skipParsingText)
     {
       Console.WriteLine("Enter text to convert to speech");
       while(true)
       {
         try
         {
-          ConvertInput(Console.ReadLine());
+          ConvertInput(Console.ReadLine(), skipParsingText);
         }
         catch(Exception)
         {
@@ -34,8 +41,11 @@ namespace ISS.App
       }
     }
 
-    public void ConvertInput(string input)
+    public void ConvertInput(string input, bool skipParsingText)
     {
+      if (!skipParsingText)
+        input = _textToPhoneticsService.Parse(input);
+
       var syllables = _phoneticParserService.Parse(input);
           var model = _intonationModelService.CreateModel(syllables);
           OutputFileHelper.Print(new OutputFileProperties() {

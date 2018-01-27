@@ -10,7 +10,7 @@ namespace ISS.Infrastructure.Stores
 {
   public class MonetPhoneticStore : IPhoneticStore
   {
-    public IDictionary<string, Phonetic> PhoneticPostures { get; private set; }
+    public IReadOnlyDictionary<string, Phonetic> PhoneticPostures { get; private set; }
     
     public MonetPhoneticStore(string phoneListFile)
     {
@@ -26,7 +26,9 @@ namespace ISS.Infrastructure.Stores
           var categories = phone.Elements().Where(x => x.Name == "Category");
           var phonetic = new Phonetic()
           {
-            Name = phone.Attribute("name").Value,
+            Name = phone.Attribute("name").Value.Contains("'")
+              ? "'" + phone.Attribute("name").Value.Replace("'", "")
+              : phone.Attribute("name").Value,
             Categories = categories.Select(category => 
               (Category)Enum.Parse(typeof(Category), category.Attribute("name").Value, true)),
             AspVol = GetDoubleByName(elements, "aspVol"),

@@ -3,8 +3,8 @@ using ISS.Infrastructure.Models;
 
 namespace ISS.Infrastructure.Stores
 {
-  public interface IPhoneticStore
+  public interface IDictionaryStore
   {
-    IReadOnlyDictionary<string, Phonetic> PhoneticPostures { get; }
+    IReadOnlyDictionary<string, string> Dictionary { get; }
   }
 }

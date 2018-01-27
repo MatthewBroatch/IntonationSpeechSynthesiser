@@ -24,8 +24,10 @@ namespace ISS.App
 
       services.AddTransient<ConsoleListener>();
       services.AddTransient<IPhoneticParserService, PhoneticParserService>();
+      services.AddTransient<ITextToPhoneticsService, TextToPhoneticsService>();
       services.AddTransient<IIntonationModelService, IntonationModelService>();
       services.AddSingleton<IPhoneticStore>(provider => new MonetPhoneticStore(Configuration["phoneList"]));
+      services.AddSingleton<IDictionaryStore>(provider => new EnglishDictionaryStore(Configuration["syllableDictionary"]));
     }
   }
 }
