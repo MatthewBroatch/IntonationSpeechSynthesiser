@@ -15,14 +15,14 @@ namespace ISS.Infrastructure.Services
         return Enumerable.Range(0, Convert.ToInt32(duration))
           .Select(x => new IntonationModel()
           {
-            Aspiration = 0,
-            Frication = 0,
+            AspirationVolume = 0,
+            FricationVolume = 0,
             FricationBW = 0,
             FricationCF = 0,
             FricationPosition = 0,
             Pitch = 0,
-            RadiusSegments = syllable.Postures.First().RadiusSegments,
-            Voicing = 1,
+            RadiusSegments = syllable.Postures.First().RadiusSegments.ToList(),
+            GlotVolume = 60,
             Velum = syllable.Postures.First().Velum,
           });
       });

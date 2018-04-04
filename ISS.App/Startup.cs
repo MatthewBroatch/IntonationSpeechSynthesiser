@@ -1,3 +1,4 @@
+using ISS.Infrastructure.Models;
 using ISS.Infrastructure.Services;
 using ISS.Infrastructure.Stores;
 using Microsoft.Extensions.Configuration;
@@ -26,6 +27,8 @@ namespace ISS.App
       services.AddTransient<IPhoneticParserService, PhoneticParserService>();
       services.AddTransient<ITextToPhoneticsService, TextToPhoneticsService>();
       services.AddTransient<IIntonationModelService, IntonationModelService>();
+      services.AddTransient<ModelToWaveService>();
+      services.AddSingleton<ThroatModelParameters>(provider => ThroatModelParameters.CreateDefault());
       services.AddSingleton<IPhoneticStore>(provider => new MonetPhoneticStore(Configuration["phoneList"]));
       services.AddSingleton<IDictionaryStore>(provider => new EnglishDictionaryStore(Configuration["syllableDictionary"]));
     }

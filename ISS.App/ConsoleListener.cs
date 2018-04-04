@@ -1,6 +1,9 @@
 using System;
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.IO;
 using System.Linq;
-using ISS.App.Models;
+using ISS.Infrastructure.Models;
 using ISS.Infrastructure.Services;
 using ISS.Infrastructure.Stores;
 
@@ -12,17 +15,23 @@ namespace ISS.App
     private IIntonationModelService _intonationModelService;
     private IPhoneticStore _phoneticStore;
     private ITextToPhoneticsService _textToPhoneticsService;
+    private ModelToWaveService _modelToWaveService;
+    private ThroatModelParameters _parameters;
 
     public ConsoleListener(
       IPhoneticParserService phoneticParserService,
       IIntonationModelService intonationModelService,
       IPhoneticStore phoneticStore,
-      ITextToPhoneticsService textToPhoneticsService)
+      ITextToPhoneticsService textToPhoneticsService,
+      ThroatModelParameters parameters,
+      ModelToWaveService modelToWaveService)
     {
       _phoneticParserService = phoneticParserService;
       _intonationModelService = intonationModelService;
       _phoneticStore = phoneticStore;
       _textToPhoneticsService = textToPhoneticsService;
+      _modelToWaveService = modelToWaveService;
+      _parameters = parameters;
     }
 
     public void StartListening(bool skipParsingText)
@@ -46,32 +55,14 @@ namespace ISS.App
       if (!skipParsingText)
         input = _textToPhoneticsService.Parse(input);
 
-      var syllables = _phoneticParserService.Parse(input);
-          var model = _intonationModelService.CreateModel(syllables);
-          OutputFileHelper.Print(new OutputFileProperties() {
-            OutputFileFormat = 2, // 0 = AU, 1 = AIFF, 2 = WAVE
-            OutputSampleRate = 44100.0, // 22050.0, 44100.0
-            InControlRate = 250.0, // 1 - 1000 Hz
-            MasterVolume = 60.0, // 0 - 60 dB
-            OutChannels = 1, //1 or 2
-            StereoBalance =	0.0, // -1 to +1
-            GlotSrcType =	0, // 0 = pulse, 1 = sine
-            GlotPulseRise = 40.0, // 5 - 50 percent of GP period
-            GlotPulseFallMin = 16.0, // 5 - 50 percent of GP period
-            GlotPulseFallMax = 32.0, // 5 - 50 percent of GP period
-            GlotSrcBreath = 0.8, // 0 - 10 percent of GS amplitude
-            TubeLength = 18.5, // 10 - 20 cm
-            TubeTemp = 32.0, // 25 - 40 degrees celsius
-            JunctionLoss = 1.5,	// 0 - 5 percent of unity gain
-            AperatureScalingRadius = 3.05, // 3.05 - 12 cm
-            MouthAperatureCoefficient = 5000, // 100 - nyqyist Hz
-            NoseAperatureCoefficient = 5000, // 100 - hyqyist Hz
-            NoseRadius = new double[] { 1.35, 1.96, 1.91, 1.30, 0.73 }, // 0 - 3 cm
-            ThroatFreqCutoff = 1500.0, // 50 - nyquist Hz
-            ThroatVolume = 6.0, // 0 - 48 dB
-            PulseModulationOfNoise = 1, // 0 = off, 1 = on
-            NoiseCrossmixOffset = 48.0, // 30 - 60 dB
-          }, model);
+      var syllables = _phoneticParserService.Parse(input).ToList();
+      var model = _intonationModelService.CreateModel(syllables).ToList();
+      var waveform = _modelToWaveService.Synthesize(model).ToList();
+      var file = OutputFileHelper.WriteWaveFile(waveform, _modelToWaveService.SampleRate, _parameters);
+
+      Process.Start(@"powershell", $@"-c (New-Object Media.SoundPlayer '{file}').PlaySync();").WaitForExit();
+      File.Delete(file);
+      // OutputFileHelper.Print(ThroatModelParameters.CreateDefault(), model);
     }
   }
 }
